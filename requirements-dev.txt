@@ -1,0 +1,2 @@
+BeautifulSoup>=4.8.0
+urllib3>=1.24.0

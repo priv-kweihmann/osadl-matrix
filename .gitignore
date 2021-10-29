@@ -1,0 +1,20 @@
+# SPDX-FileCopyrightText: 2021 Konrad Weihmann
+# SPDX-License-Identifier: Unlicensed
+
+*~
+__pycache__
+*.pdf
+*.html
+*.png
+
+dist
+build
+osadl_matrix.egg-info
+
+TEST*.xml
+tests/all.log
+.pytest_cache
+.mypy_cache
+.coverage
+
+tmp/*
