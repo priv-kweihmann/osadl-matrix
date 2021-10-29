@@ -52,6 +52,9 @@ jobs:
         GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
         source_file: 'VERSION'
         extraction_regex: '(.*)'
+    - name: create sdist release
+      run: python3 setup.py sdist
+      shell: bash        
     - name: publish package
       uses: pypa/gh-action-pypi-publish@release/v1
       with:
