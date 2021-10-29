@@ -9,6 +9,20 @@ The data is licensed under [CC-BY-4.0](LICENSE.ccby40)
 
 ## Usage
 
+### Using builtin functions
+
+```python
+import osadl_matrix
+
+result = osadl_matrix.is_compatible("BSD-3-Clause", "MIT")
+# result is either
+# osadl_matrix.OSADLCompatibility.YES - licenses are compatible
+# osadl_matrix.OSADLCompatibility.NO - licenses are *NOT* compatible
+# osadl_matrix.OSADLCompatibility.UNDEF - no data available on compatibility
+```
+
+### Using the raw data
+
 ```python
 import csv
 
