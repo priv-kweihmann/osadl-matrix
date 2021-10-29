@@ -32,8 +32,6 @@ jobs:
       run: |
         pytest
       shell: bash
-    - name: install
-      run: python3 setup.py install
     - name: bump version
       run: |
         date --utc '+%Y.%m.%d.%H%m%S' | tr -d '\n' > VERSION
