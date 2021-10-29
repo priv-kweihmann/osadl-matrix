@@ -47,7 +47,7 @@ jobs:
         email: ${{ secrets.COMMITER_MAIL }}
         rebase: 'true'
     - name: tag version
-      uses: jaliborc/action-general-autotag@1.0.0
+      uses: jaliborc/action-general-autotag@1.0.1
       with:
         GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
         source_file: 'VERSION'
