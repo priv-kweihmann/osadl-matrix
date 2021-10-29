@@ -23,9 +23,9 @@ class OSADLCompatibility(Enum):
         return OSADLCompatibility.UNDEF
 
 
-def __read_db():
+def __read_db(customdb=None):
     global __osadl_db
-    with open(OSADL_MATRIX) as i:
+    with open(customdb or OSADL_MATRIX) as i:
         _reader = csv.DictReader(i, delimiter=',', quotechar='"')
         for row in _reader:
             key = row['Compatibility*']
@@ -35,7 +35,7 @@ def __read_db():
                 __osadl_db[(key, k)] = OSADLCompatibility.from_text(v)
 
 
-def is_compatible(a, b):
+def is_compatible(a, b, customdb=None):
     """checks if license 'a' is compatible to license 'b'
 
     Args:
@@ -46,7 +46,7 @@ def is_compatible(a, b):
         [OSADLCompatibility]: Either yes, no or undefined
     """
     if not __osadl_db:
-        __read_db()
+        __read_db(customdb=customdb)
     if a == b:
         return OSADLCompatibility.YES
     return __osadl_db.get((a, b), OSADLCompatibility.UNDEF)
