@@ -25,7 +25,7 @@ setuptools.setup(
     description = 'OSADL license compatibility matrix as a CSV',
     long_description = _long_description,
     long_description_content_type = 'text/markdown',
-    license_files = ('LICENSE.ccby40','LICENSE.Unlicensed',),
+    license_files = ('LICENSE.ccby40', 'LICENSE.Unlicensed'),
     packages = ['osadl_matrix'],
     package_data = {
         'osadl_matrix': ['osadl_matrix/*'],
