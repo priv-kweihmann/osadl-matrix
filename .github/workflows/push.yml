@@ -51,7 +51,7 @@ jobs:
       with:
         GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
         source_file: 'VERSION'
-        extraction_regex: '(\\d+(\\.\\d+)*)'
+        extraction_regex: '(.*)'
     - name: publish package
       uses: pypa/gh-action-pypi-publish@release/v1
       with:
