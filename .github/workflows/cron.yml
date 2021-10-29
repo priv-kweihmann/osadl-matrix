@@ -1,0 +1,46 @@
+name: 'Cron bump'
+
+on:
+  schedule:
+    - cron: '0 0 1 * *'
+
+jobs:
+  build:
+    name: 'scrap and push'
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: checkout
+      uses: actions/checkout@master
+      with:
+        ref: master
+    - name: scrap
+      run: |
+        pip3 install -r requirements-dev.txt
+        python3 scripts/scrapper.py
+      shell: bash
+    - name: install dependencies
+      run: |
+        python3 -m pip install --upgrade pip
+        pip install -r requirements.txt
+    - name: build
+      run: python3 setup.py build
+    - name: test
+      run: |
+        pytest
+      shell: bash
+    - name: test
+      run: |
+        pytest
+      shell: bash
+    - name: push
+      uses: github-actions-x/commit@v2.8
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        push-branch: 'master'
+        commit-message: 'Bump matrix'
+        files: osadl_matrix/osadl-matrix.csv
+        name: ${{ secrets.COMMITER_NAME }}
+        email: ${{ secrets.COMMITER_MAIL }}
+        rebase: 'true'

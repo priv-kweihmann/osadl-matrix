@@ -1,0 +1,55 @@
+name: 'push and release master'
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    name: 'push and release'
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: checkout
+      uses: actions/checkout@master
+      with:
+        ref: master
+    - name: install dependencies
+      run: |
+        python3 -m pip install --upgrade pip
+        pip install -r requirements.txt
+    - name: build
+      run: python3 setup.py build
+    - name: test
+      run: |
+        pytest
+      shell: bash
+    - name: install
+      run: python3 setup.py install
+    - name: bump version
+      run: |
+        date --utc '+%Y.%m.%d.%H%m%S' | tr -d '\n' > VERSION
+      shell: bash
+    - name: push
+      uses: github-actions-x/commit@v2.8
+      with:
+        github-token: ${{ secrets.GITHUB_TOKEN }}
+        push-branch: 'master'
+        commit-message: 'Bump version'
+        files: VERSION
+        name: ${{ secrets.COMMITER_NAME }}
+        email: ${{ secrets.COMMITER_MAIL }}
+        rebase: 'true'
+    - name: tag version
+      uses: jaliborc/action-general-autotag@1.0.0
+      with:
+        GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
+        source_file: 'VERSION'
+        extraction_regex: '(\\d+(\\.\\d+)*)'
+    - name: publish package
+      uses: pypa/gh-action-pypi-publish@release/v1
+      with:
+        user: ${{ secrets.PYPI_USER_NAME }}
+        password: ${{ secrets.PYPI_API_TOKEN }}
