@@ -3,3 +3,4 @@ include VERSION
 include LICENSE.*
 include requirements.txt
 include requirements-dev.txt
+include osadl_matrix/osadl-matrix.csv

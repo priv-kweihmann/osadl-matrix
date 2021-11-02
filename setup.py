@@ -27,12 +27,6 @@ setuptools.setup(
     long_description_content_type = 'text/markdown',
     license_files = ('LICENSE.ccby40', 'LICENSE.Unlicensed'),
     packages = ['osadl_matrix'],
-    package_data = {
-        'osadl_matrix': ['*.csv'],
-    },
-    data_files = [
-        ('osadl_matrix', ['osadl-matrix.csv'])
-    ],
     install_requires = requirements,
     extras_require = {
         'dev': requirements_dev,
