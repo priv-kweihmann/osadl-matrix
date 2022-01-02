@@ -35,18 +35,18 @@ def __read_db(customdb=None):
                 __osadl_db[(key, k)] = OSADLCompatibility.from_text(v)
 
 
-def is_compatible(a, b, customdb=None):
-    """checks if license 'a' is compatible to license 'b'
+def is_compatible(outbound, inbound, customdb=None):
+    """checks if the 'outbound' license is compatible with the 'inbound' license
 
     Args:
-        a (string): SPDX ID
-        b (string): SPDX ID
+        outbound (string): SPDX ID for an outbound license, e.g. the license used for distribution of an application 
+        inbound (string): SPDX ID for an inbound license, e.g. the license used for a dependency of the application
 
     Returns:
         [OSADLCompatibility]: Either yes, no or undefined
     """
     if not __osadl_db:
         __read_db(customdb=customdb)
-    if a == b:
+    if outbound == inbound:
         return OSADLCompatibility.YES
-    return __osadl_db.get((a, b), OSADLCompatibility.UNDEF)
+    return __osadl_db.get((outbound, inbound), OSADLCompatibility.UNDEF)
