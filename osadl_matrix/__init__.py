@@ -39,7 +39,7 @@ def is_compatible(outbound, inbound, customdb=None):
     """checks if the 'outbound' license is compatible with the 'inbound' license
 
     Args:
-        outbound (string): SPDX ID for an outbound license, e.g. the license used for distribution of an application 
+        outbound (string): SPDX ID for an outbound license, e.g. the license used for distribution of an application
         inbound (string): SPDX ID for an inbound license, e.g. the license used for a dependency of the application
 
     Returns:
