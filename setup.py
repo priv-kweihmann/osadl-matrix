@@ -22,13 +22,13 @@ setuptools.setup(
     version = _version,
     author = 'Konrad Weihmann',
     author_email = 'kweihmann@outlook.com',
-    description = 'OSADL license compatibility matrix as a CSV',
+    description = 'OSADL license compatibility matrix',
     long_description = _long_description,
     long_description_content_type = 'text/markdown',
     license_files = ('LICENSE.ccby40', 'LICENSE.Unlicensed'),
     packages = ['osadl_matrix'],
     package_data = {
-        'osadl_matrix': ['*.csv'],
+        'osadl_matrix': ['*.csv', '*.json'],
     },
     install_requires = requirements,
     extras_require = {
