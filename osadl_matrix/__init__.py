@@ -6,6 +6,7 @@ import os
 from enum import Enum
 
 OSADL_MATRIX = os.path.join(os.path.dirname(__file__), 'osadl-matrix.csv')
+OSADL_MATRIX_JSON = os.path.join(os.path.dirname(__file__), 'osadl-matrix.json')
 __osadl_db = {}
 
 
