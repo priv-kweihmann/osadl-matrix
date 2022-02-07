@@ -15,6 +15,10 @@ The raw data of the OSADL Open Source License Checklists are licensed under the 
 Further information can be found [here](https://www.osadl.org/Access-to-raw-data.oss-compliance-raw-data-access.0.html)
 A copy of the CC-BY-4.0 text can be found [here](LICENSE.ccby40)
 
+## Disclaimer
+
+We are not affiliated, associated, endorsed by, or in any way officially connected with the Open Source Automation Development Lab (OSADL) eG, or any of its subsidiaries or its affiliates. The official OSADL website can be found at https://www.osadl.org.
+
 ## Usage
 
 ### Using builtin functions
