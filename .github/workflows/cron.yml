@@ -1,6 +1,8 @@
 name: 'Cron bump'
 
 on:
+  repository_dispatch:
+    types: do-cron
   schedule:
     - cron: '0 0 1 * *'
 
@@ -37,7 +39,7 @@ jobs:
         pytest
       shell: bash
     - name: push
-      uses: github-actions-x/commit@v2.8
+      uses: github-actions-x/commit@v2.9
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         push-branch: 'master'

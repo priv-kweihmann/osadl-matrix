@@ -37,7 +37,7 @@ jobs:
         date --utc '+%Y.%m.%d.%H%m%S' | tr -d '\n' > VERSION
       shell: bash
     - name: push
-      uses: github-actions-x/commit@v2.8
+      uses: github-actions-x/commit@v2.9
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         push-branch: 'master'

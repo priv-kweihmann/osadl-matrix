@@ -1,0 +1,10 @@
+#!/bin/sh
+# SPDX-License-Identifier: MIT
+# Copyright (c) 2021, Konrad Weihmann
+
+[ -z "${TOKEN}" ] && echo "TOKEN must be passed by environment" && exit 1
+curl -H "Accept: application/vnd.github.everest-preview+json" \
+    -H "Authorization: token ${TOKEN}" \
+    --request POST \
+    --data '{"event_type": "do-cron"}' \
+    https://api.github.com/repos/priv-kweihmann/osadl-matrix/dispatches
