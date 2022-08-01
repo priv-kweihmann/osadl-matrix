@@ -44,7 +44,7 @@ jobs:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         push-branch: 'master'
         commit-message: 'Bump matrix'
-        files: osadl_matrix/osadl-matrix.csv
+        files: osadl_matrix/osadl-matrix.csv osadl_matrix/osadl-matrix.json
         name: ${{ secrets.COMMITER_NAME }}
         email: ${{ secrets.COMMITER_MAIL }}
         rebase: 'true'
