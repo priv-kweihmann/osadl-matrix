@@ -38,7 +38,7 @@ def _create_matrix(raw):
     with open(_DUMP_CSV, 'w') as csvfile:
         cwriter = csv.writer(csvfile, delimiter=',',
                                 quotechar='"', quoting=csv.QUOTE_MINIMAL)
-        for line in _csv[:-1]:
+        for line in _csv:
             if len(line) < 3:
                 continue
             cwriter.writerow(line)
