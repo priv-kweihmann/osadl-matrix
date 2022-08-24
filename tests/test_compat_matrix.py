@@ -27,3 +27,7 @@ class TestMatrix():
 
     def test_7(self):
         assert osadl_matrix.is_compatible("My-Fairy-Little-License", "LGPL-2.1-only") ==  osadl_matrix.OSADLCompatibility.UNDEF
+
+    def test_8(self):
+        assert osadl_matrix.is_compatible("zlib-acknowledgement", "zlib-acknowledgement") ==  osadl_matrix.OSADLCompatibility.YES
+
