@@ -13,4 +13,4 @@ pytest-sugar ~=0.9.0
 pytest-tldr ~=0.2.0
 twine ~=4.0.0
 urllib3 ~= 1.26.0
-wemake-python-styleguide ~=0.16.0
+wemake-python-styleguide ~=0.16.1
