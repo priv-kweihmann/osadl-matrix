@@ -19,14 +19,14 @@ jobs:
     - name: install dependencies
       run: |
         python3 -m pip install --upgrade pip
-        pip install -r requirements.txt
+        pip3 install -r requirements.txt
       shell: bash
     - name: build
       run: python3 setup.py build
       shell: bash
     - name: install more dependencies
       run: |
-        pip install -r requirements-dev.txt
+        pip3 install -r requirements-dev.txt
       shell: bash
     - name: test
       run: |
