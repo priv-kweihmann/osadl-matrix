@@ -28,9 +28,16 @@ import osadl_matrix
 
 result = osadl_matrix.is_compatible("BSD-3-Clause", "MIT")
 # result is either
+# True - licenses are compatible
+# False - licenses are *NOT* compatible
+
+result = osadl_matrix.get_compatibility("GPL-2.0-only", "MIT")
+# result is either
 # osadl_matrix.OSADLCompatibility.YES - licenses are compatible
 # osadl_matrix.OSADLCompatibility.NO - licenses are *NOT* compatible
-# osadl_matrix.OSADLCompatibility.UNDEF - no data available on compatibility
+# osadl_matrix.OSADLCompatibility.UNKNOWN - license compatibility is uncertain
+# osadl_matrix.OSADLCompatibility.CHECKDEP - compatibility has depencies that need to be checked
+# osadl_matrix.OSADLCompatibility.UNDEF - at least one of the licenses are not present in the OSADL matrix
 ```
 
 ### Using the raw data
