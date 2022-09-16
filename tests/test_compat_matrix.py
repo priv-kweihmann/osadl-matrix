@@ -34,15 +34,15 @@ class TestMatrix():
     def test_9(self):
         assert not osadl_matrix.is_compatible("LGPL-2.1-only", "GPL-2.0-only")
 
-    def test_9(self):
+    def test_10(self):
         assert not osadl_matrix.is_compatible("MPL-2.0", "APL-2.0")
 
-    def test_10(self):
+    def test_11(self):
         assert osadl_matrix.get_compatibility("MPL-2.0", "AFL-2.0")  == osadl_matrix.OSADLCompatibility.UNKNOWN
 
-    def test_10(self):
+    def test_12(self):
         assert osadl_matrix.get_compatibility("GPL-2.0-only", "EPL-2.0")  == osadl_matrix.OSADLCompatibility.CHECKDEP
 
-    def test_10(self):
+    def test_13(self):
         assert osadl_matrix.get_compatibility("Unfairy-license", "EPL-2.0")  == osadl_matrix.OSADLCompatibility.UNDEF
 
