@@ -36,6 +36,8 @@ class OSADLCompatibility(Enum):
             return OSADLCompatibility.UNKNOWN
         if _in == 'Check dependency':
             return OSADLCompatibility.CHECKDEP
+        if _in == 'Same':
+            return OSADLCompatibility.YES
         return OSADLCompatibility.UNDEF
 
 
@@ -46,8 +48,6 @@ def __read_db(customdb=None):
         for row in _reader:
             key = row['Compatibility*']
             for k, v in row.items():
-                if k == key:
-                    continue
                 __osadl_db[(key, k)] = OSADLCompatibility.from_text(v)
 
 
@@ -83,6 +83,4 @@ def get_compatibility(outbound, inbound, customdb=None):
     """
     if not __osadl_db:
         __read_db(customdb=customdb)
-    if outbound == inbound:
-        return OSADLCompatibility.YES
     return __osadl_db.get((outbound, inbound), OSADLCompatibility.UNDEF)
