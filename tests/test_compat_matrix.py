@@ -46,5 +46,8 @@ class TestMatrix():
     def test_13(self):
         assert osadl_matrix.get_compatibility("Unfairy-license", "EPL-2.0")  == osadl_matrix.OSADLCompatibility.UNDEF
 
+    def test_14(self):
+        assert osadl_matrix.get_compatibility("A", "A")  == osadl_matrix.OSADLCompatibility.UNDEF
+
     def test_supported_licenes(self):
         assert len(osadl_matrix.supported_licenses()) > 20
