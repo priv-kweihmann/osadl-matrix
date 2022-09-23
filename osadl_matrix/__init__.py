@@ -41,6 +41,8 @@ class OSADLCompatibility(Enum):
 
 def __read_db(customdb=None):
     global __osadl_db
+    if __osadl_db:
+        return
     with open(customdb or OSADL_MATRIX) as i:
         _reader = csv.DictReader(i, delimiter=',', quotechar='"')
         for row in _reader:
@@ -81,8 +83,19 @@ def get_compatibility(outbound, inbound, customdb=None):
         [OSADLCompatibility]: Either yes, no, unknown or undefined
 
     """
-    if not __osadl_db:
-        __read_db(customdb=customdb)
+    __read_db(customdb=customdb)
     if outbound == inbound:
         return OSADLCompatibility.YES
     return __osadl_db.get((outbound, inbound), OSADLCompatibility.UNDEF)
+
+def supported_licenses(customdb=None):
+    licenses = []
+    __read_db(customdb=customdb)
+    for row in __osadl_db:
+        key, k = row
+        if k == "Compatibility":
+            pass
+        if k in licenses:
+            continue
+        licenses.append(k)
+    return licenses
