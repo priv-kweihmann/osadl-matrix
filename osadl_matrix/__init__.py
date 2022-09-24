@@ -42,13 +42,16 @@ class OSADLCompatibility(Enum):
 
 
 def __read_db(customdb=None):
+    """reads (first call only) matrix file
+    """
     global __osadl_db
-    with open(customdb or OSADL_MATRIX) as i:
-        _reader = csv.DictReader(i, delimiter=',', quotechar='"')
-        for row in _reader:
-            key = row['Compatibility*']
-            for k, v in row.items():
-                __osadl_db[(key, k)] = OSADLCompatibility.from_text(v)
+    if not __osadl_db:
+        with open(customdb or OSADL_MATRIX) as i:
+            _reader = csv.DictReader(i, delimiter=',', quotechar='"')
+            for row in _reader:
+                key = row['Compatibility*']
+                for k, v in row.items():
+                    __osadl_db[(key, k)] = OSADLCompatibility.from_text(v)
 
 
 def is_compatible(outbound, inbound, customdb=None):
@@ -81,6 +84,19 @@ def get_compatibility(outbound, inbound, customdb=None):
         [OSADLCompatibility]: Either yes, no, unknown or undefined
 
     """
-    if not __osadl_db:
-        __read_db(customdb=customdb)
+    __read_db(customdb=customdb)
     return __osadl_db.get((outbound, inbound), OSADLCompatibility.UNDEF)
+
+
+def supported_licenses(customdb=None):
+    """returns the supported licenses (i.e. which licenses for which
+    there is a known compatibility status).
+    """
+    __read_db(customdb=customdb)
+    licenses = set()
+    for row in __osadl_db:
+        key, k = row
+        if k == "Compatibility*":
+            continue
+        licenses.add(k)
+    return licenses
