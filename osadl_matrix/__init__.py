@@ -40,6 +40,8 @@ class OSADLCompatibility(Enum):
 
 
 def __read_db(customdb=None):
+    """reads matrix (custom or default) on first call.
+    """
     global __osadl_db
     if __osadl_db:
         return
@@ -88,14 +90,16 @@ def get_compatibility(outbound, inbound, customdb=None):
         return OSADLCompatibility.YES
     return __osadl_db.get((outbound, inbound), OSADLCompatibility.UNDEF)
 
+
 def supported_licenses(customdb=None):
-    licenses = []
+    """returns the supported licenses (i.e. which licenses for which
+    there is a known compatibility status).
+    """
+    licenses = set()
     __read_db(customdb=customdb)
     for row in __osadl_db:
         key, k = row
-        if k == "Compatibility":
-            pass
-        if k in licenses:
+        if k == "Compatibility*":
             continue
-        licenses.append(k)
+        licenses.add(k)
     return licenses
