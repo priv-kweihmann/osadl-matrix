@@ -5,7 +5,7 @@
 import pytest
 import osadl_matrix
 
-class TestCusotmMatrix():
+class TestCustomMatrix():
 
     def test_supported_licenes_size(self):
         assert len(osadl_matrix.supported_licenses("tests/mini-matrix.csv")) == 2
