@@ -38,6 +38,9 @@ result = osadl_matrix.get_compatibility("GPL-2.0-only", "MIT")
 # osadl_matrix.OSADLCompatibility.UNKNOWN - license compatibility is uncertain
 # osadl_matrix.OSADLCompatibility.CHECKDEP - compatibility has depencies that need to be checked
 # osadl_matrix.OSADLCompatibility.UNDEF - at least one of the licenses are not present in the OSADL matrix
+
+result = osadl_matrix.supported_licenses()
+# result is a set of supported license (identifiers)
 ```
 
 ### Using the raw data
