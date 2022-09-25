@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 # SPDX-FileCopyrightText: 2021 Konrad Weihmann
 # SPDX-FileCopyrightText: 2022 Henrik Sandklef
 # SPDX-License-Identifier: Unlicensed
