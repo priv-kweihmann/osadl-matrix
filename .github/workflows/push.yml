@@ -16,6 +16,19 @@ jobs:
       uses: actions/checkout@master
       with:
         ref: master
+    - uses: dorny/path-filter@v2.10.2
+      id: code-changes
+      with:
+        filters: |
+          code_changes:
+            - 'osadl_matrix/**/*'
+            - 'osadl_matrix/*'
+            - 'LICENSE*'
+            - 'README.md'
+            - 'requirements.txt'
+            - 'MANIFEST.in'
+            - 'setup.py'
+            - 'VERSION'
     - name: install dependencies
       run: |
         python3 -m pip install --upgrade pip
@@ -33,10 +46,12 @@ jobs:
         pytest
       shell: bash
     - name: bump version
+      if: steps.code-changes.outputs.code_changes == 'true'
       run: |
         date --utc '+%Y.%m.%d.%H%m%S' | tr -d '\n' > VERSION
       shell: bash
     - name: push
+      if: steps.code-changes.outputs.code_changes == 'true'
       uses: github-actions-x/commit@v2.9
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -47,6 +62,7 @@ jobs:
         email: ${{ secrets.COMMITER_MAIL }}
         rebase: 'true'
     - name: tag version
+      if: steps.code-changes.outputs.code_changes == 'true'
       uses: butlerlogic/action-autotag@1.1.2
       with:
         GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
@@ -54,9 +70,11 @@ jobs:
         root: "VERSION"
         regex_pattern: '(.*)'
     - name: create sdist release
+      if: steps.code-changes.outputs.code_changes == 'true'
       run: python3 setup.py sdist
       shell: bash        
     - name: publish package
+      if: steps.code-changes.outputs.code_changes == 'true'
       uses: pypa/gh-action-pypi-publish@release/v1
       with:
         user: __token__
