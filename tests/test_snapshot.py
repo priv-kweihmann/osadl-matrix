@@ -1531,7 +1531,7 @@ class TestSnapshot():
     
 
     def test_AGPL_3_0_only_GPL_1_0_or_later(self):        
-        assert osadl_matrix.get_compatibility("AGPL-3.0-only", "GPL-1.0-or-later") == osadl_matrix.OSADLCompatibility.NO
+        assert osadl_matrix.get_compatibility("AGPL-3.0-only", "GPL-1.0-or-later") == osadl_matrix.OSADLCompatibility.CHECKDEP
     
 
     def test_AGPL_3_0_only_GPL_2_0_only(self):        
@@ -1543,15 +1543,15 @@ class TestSnapshot():
     
 
     def test_AGPL_3_0_only_GPL_2_0_or_later(self):        
-        assert osadl_matrix.get_compatibility("AGPL-3.0-only", "GPL-2.0-or-later") == osadl_matrix.OSADLCompatibility.NO
+        assert osadl_matrix.get_compatibility("AGPL-3.0-only", "GPL-2.0-or-later") == osadl_matrix.OSADLCompatibility.CHECKDEP
     
 
     def test_AGPL_3_0_only_GPL_3_0_only(self):        
-        assert osadl_matrix.get_compatibility("AGPL-3.0-only", "GPL-3.0-only") == osadl_matrix.OSADLCompatibility.YES
+        assert osadl_matrix.get_compatibility("AGPL-3.0-only", "GPL-3.0-only") == osadl_matrix.OSADLCompatibility.CHECKDEP
     
 
     def test_AGPL_3_0_only_GPL_3_0_or_later(self):        
-        assert osadl_matrix.get_compatibility("AGPL-3.0-only", "GPL-3.0-or-later") == osadl_matrix.OSADLCompatibility.YES
+        assert osadl_matrix.get_compatibility("AGPL-3.0-only", "GPL-3.0-or-later") == osadl_matrix.OSADLCompatibility.CHECKDEP
     
 
     def test_AGPL_3_0_only_HPND(self):        
@@ -1583,19 +1583,19 @@ class TestSnapshot():
     
 
     def test_AGPL_3_0_only_LGPL_2_1_only(self):        
-        assert osadl_matrix.get_compatibility("AGPL-3.0-only", "LGPL-2.1-only") == osadl_matrix.OSADLCompatibility.NO
+        assert osadl_matrix.get_compatibility("AGPL-3.0-only", "LGPL-2.1-only") == osadl_matrix.OSADLCompatibility.CHECKDEP
     
 
     def test_AGPL_3_0_only_LGPL_2_1_or_later(self):        
-        assert osadl_matrix.get_compatibility("AGPL-3.0-only", "LGPL-2.1-or-later") == osadl_matrix.OSADLCompatibility.NO
+        assert osadl_matrix.get_compatibility("AGPL-3.0-only", "LGPL-2.1-or-later") == osadl_matrix.OSADLCompatibility.CHECKDEP
     
 
     def test_AGPL_3_0_only_LGPL_3_0_only(self):        
-        assert osadl_matrix.get_compatibility("AGPL-3.0-only", "LGPL-3.0-only") == osadl_matrix.OSADLCompatibility.YES
+        assert osadl_matrix.get_compatibility("AGPL-3.0-only", "LGPL-3.0-only") == osadl_matrix.OSADLCompatibility.CHECKDEP
     
 
     def test_AGPL_3_0_only_LGPL_3_0_or_later(self):        
-        assert osadl_matrix.get_compatibility("AGPL-3.0-only", "LGPL-3.0-or-later") == osadl_matrix.OSADLCompatibility.YES
+        assert osadl_matrix.get_compatibility("AGPL-3.0-only", "LGPL-3.0-or-later") == osadl_matrix.OSADLCompatibility.CHECKDEP
     
 
     def test_AGPL_3_0_only_Libpng(self):        
@@ -1879,7 +1879,7 @@ class TestSnapshot():
     
 
     def test_AGPL_3_0_or_later_GPL_1_0_or_later(self):        
-        assert osadl_matrix.get_compatibility("AGPL-3.0-or-later", "GPL-1.0-or-later") == osadl_matrix.OSADLCompatibility.NO
+        assert osadl_matrix.get_compatibility("AGPL-3.0-or-later", "GPL-1.0-or-later") == osadl_matrix.OSADLCompatibility.CHECKDEP
     
 
     def test_AGPL_3_0_or_later_GPL_2_0_only(self):        
@@ -1891,15 +1891,15 @@ class TestSnapshot():
     
 
     def test_AGPL_3_0_or_later_GPL_2_0_or_later(self):        
-        assert osadl_matrix.get_compatibility("AGPL-3.0-or-later", "GPL-2.0-or-later") == osadl_matrix.OSADLCompatibility.NO
+        assert osadl_matrix.get_compatibility("AGPL-3.0-or-later", "GPL-2.0-or-later") == osadl_matrix.OSADLCompatibility.CHECKDEP
     
 
     def test_AGPL_3_0_or_later_GPL_3_0_only(self):        
-        assert osadl_matrix.get_compatibility("AGPL-3.0-or-later", "GPL-3.0-only") == osadl_matrix.OSADLCompatibility.YES
+        assert osadl_matrix.get_compatibility("AGPL-3.0-or-later", "GPL-3.0-only") == osadl_matrix.OSADLCompatibility.CHECKDEP
     
 
     def test_AGPL_3_0_or_later_GPL_3_0_or_later(self):        
-        assert osadl_matrix.get_compatibility("AGPL-3.0-or-later", "GPL-3.0-or-later") == osadl_matrix.OSADLCompatibility.YES
+        assert osadl_matrix.get_compatibility("AGPL-3.0-or-later", "GPL-3.0-or-later") == osadl_matrix.OSADLCompatibility.CHECKDEP
     
 
     def test_AGPL_3_0_or_later_HPND(self):        
@@ -1931,19 +1931,19 @@ class TestSnapshot():
     
 
     def test_AGPL_3_0_or_later_LGPL_2_1_only(self):        
-        assert osadl_matrix.get_compatibility("AGPL-3.0-or-later", "LGPL-2.1-only") == osadl_matrix.OSADLCompatibility.NO
+        assert osadl_matrix.get_compatibility("AGPL-3.0-or-later", "LGPL-2.1-only") == osadl_matrix.OSADLCompatibility.CHECKDEP
     
 
     def test_AGPL_3_0_or_later_LGPL_2_1_or_later(self):        
-        assert osadl_matrix.get_compatibility("AGPL-3.0-or-later", "LGPL-2.1-or-later") == osadl_matrix.OSADLCompatibility.NO
+        assert osadl_matrix.get_compatibility("AGPL-3.0-or-later", "LGPL-2.1-or-later") == osadl_matrix.OSADLCompatibility.CHECKDEP
     
 
     def test_AGPL_3_0_or_later_LGPL_3_0_only(self):        
-        assert osadl_matrix.get_compatibility("AGPL-3.0-or-later", "LGPL-3.0-only") == osadl_matrix.OSADLCompatibility.YES
+        assert osadl_matrix.get_compatibility("AGPL-3.0-or-later", "LGPL-3.0-only") == osadl_matrix.OSADLCompatibility.CHECKDEP
     
 
     def test_AGPL_3_0_or_later_LGPL_3_0_or_later(self):        
-        assert osadl_matrix.get_compatibility("AGPL-3.0-or-later", "LGPL-3.0-or-later") == osadl_matrix.OSADLCompatibility.YES
+        assert osadl_matrix.get_compatibility("AGPL-3.0-or-later", "LGPL-3.0-or-later") == osadl_matrix.OSADLCompatibility.CHECKDEP
     
 
     def test_AGPL_3_0_or_later_Libpng(self):        
@@ -11507,11 +11507,11 @@ class TestSnapshot():
     
 
     def test_GPL_1_0_or_later_AGPL_3_0_only(self):        
-        assert osadl_matrix.get_compatibility("GPL-1.0-or-later", "AGPL-3.0-only") == osadl_matrix.OSADLCompatibility.NO
+        assert osadl_matrix.get_compatibility("GPL-1.0-or-later", "AGPL-3.0-only") == osadl_matrix.OSADLCompatibility.CHECKDEP
     
 
     def test_GPL_1_0_or_later_AGPL_3_0_or_later(self):        
-        assert osadl_matrix.get_compatibility("GPL-1.0-or-later", "AGPL-3.0-or-later") == osadl_matrix.OSADLCompatibility.NO
+        assert osadl_matrix.get_compatibility("GPL-1.0-or-later", "AGPL-3.0-or-later") == osadl_matrix.OSADLCompatibility.CHECKDEP
     
 
     def test_GPL_1_0_or_later_Apache_1_0(self):        
@@ -11619,7 +11619,7 @@ class TestSnapshot():
     
 
     def test_GPL_1_0_or_later_GPL_1_0_only(self):        
-        assert osadl_matrix.get_compatibility("GPL-1.0-or-later", "GPL-1.0-only") == osadl_matrix.OSADLCompatibility.YES
+        assert osadl_matrix.get_compatibility("GPL-1.0-or-later", "GPL-1.0-only") == osadl_matrix.OSADLCompatibility.NO
     
 
     def test_GPL_1_0_or_later_GPL_1_0_or_later(self):        
@@ -11627,7 +11627,7 @@ class TestSnapshot():
     
 
     def test_GPL_1_0_or_later_GPL_2_0_only(self):        
-        assert osadl_matrix.get_compatibility("GPL-1.0-or-later", "GPL-2.0-only") == osadl_matrix.OSADLCompatibility.YES
+        assert osadl_matrix.get_compatibility("GPL-1.0-or-later", "GPL-2.0-only") == osadl_matrix.OSADLCompatibility.NO
     
 
     def test_GPL_1_0_or_later_GPL_2_0_only_WITH_Classpath_exception_2_0(self):        
@@ -11635,15 +11635,15 @@ class TestSnapshot():
     
 
     def test_GPL_1_0_or_later_GPL_2_0_or_later(self):        
-        assert osadl_matrix.get_compatibility("GPL-1.0-or-later", "GPL-2.0-or-later") == osadl_matrix.OSADLCompatibility.YES
+        assert osadl_matrix.get_compatibility("GPL-1.0-or-later", "GPL-2.0-or-later") == osadl_matrix.OSADLCompatibility.NO
     
 
     def test_GPL_1_0_or_later_GPL_3_0_only(self):        
-        assert osadl_matrix.get_compatibility("GPL-1.0-or-later", "GPL-3.0-only") == osadl_matrix.OSADLCompatibility.YES
+        assert osadl_matrix.get_compatibility("GPL-1.0-or-later", "GPL-3.0-only") == osadl_matrix.OSADLCompatibility.NO
     
 
     def test_GPL_1_0_or_later_GPL_3_0_or_later(self):        
-        assert osadl_matrix.get_compatibility("GPL-1.0-or-later", "GPL-3.0-or-later") == osadl_matrix.OSADLCompatibility.YES
+        assert osadl_matrix.get_compatibility("GPL-1.0-or-later", "GPL-3.0-or-later") == osadl_matrix.OSADLCompatibility.NO
     
 
     def test_GPL_1_0_or_later_HPND(self):        
@@ -11971,7 +11971,7 @@ class TestSnapshot():
     
 
     def test_GPL_2_0_only_GPL_1_0_or_later(self):        
-        assert osadl_matrix.get_compatibility("GPL-2.0-only", "GPL-1.0-or-later") == osadl_matrix.OSADLCompatibility.NO
+        assert osadl_matrix.get_compatibility("GPL-2.0-only", "GPL-1.0-or-later") == osadl_matrix.OSADLCompatibility.YES
     
 
     def test_GPL_2_0_only_GPL_2_0_only(self):        
@@ -11979,7 +11979,7 @@ class TestSnapshot():
     
 
     def test_GPL_2_0_only_GPL_2_0_only_WITH_Classpath_exception_2_0(self):        
-        assert osadl_matrix.get_compatibility("GPL-2.0-only", "GPL-2.0-only WITH Classpath-exception-2.0") == osadl_matrix.OSADLCompatibility.NO
+        assert osadl_matrix.get_compatibility("GPL-2.0-only", "GPL-2.0-only WITH Classpath-exception-2.0") == osadl_matrix.OSADLCompatibility.YES
     
 
     def test_GPL_2_0_only_GPL_2_0_or_later(self):        
@@ -12551,11 +12551,11 @@ class TestSnapshot():
     
 
     def test_GPL_2_0_or_later_AGPL_3_0_only(self):        
-        assert osadl_matrix.get_compatibility("GPL-2.0-or-later", "AGPL-3.0-only") == osadl_matrix.OSADLCompatibility.NO
+        assert osadl_matrix.get_compatibility("GPL-2.0-or-later", "AGPL-3.0-only") == osadl_matrix.OSADLCompatibility.CHECKDEP
     
 
     def test_GPL_2_0_or_later_AGPL_3_0_or_later(self):        
-        assert osadl_matrix.get_compatibility("GPL-2.0-or-later", "AGPL-3.0-or-later") == osadl_matrix.OSADLCompatibility.NO
+        assert osadl_matrix.get_compatibility("GPL-2.0-or-later", "AGPL-3.0-or-later") == osadl_matrix.OSADLCompatibility.CHECKDEP
     
 
     def test_GPL_2_0_or_later_Apache_1_0(self):        
@@ -12667,11 +12667,11 @@ class TestSnapshot():
     
 
     def test_GPL_2_0_or_later_GPL_1_0_or_later(self):        
-        assert osadl_matrix.get_compatibility("GPL-2.0-or-later", "GPL-1.0-or-later") == osadl_matrix.OSADLCompatibility.NO
+        assert osadl_matrix.get_compatibility("GPL-2.0-or-later", "GPL-1.0-or-later") == osadl_matrix.OSADLCompatibility.YES
     
 
     def test_GPL_2_0_or_later_GPL_2_0_only(self):        
-        assert osadl_matrix.get_compatibility("GPL-2.0-or-later", "GPL-2.0-only") == osadl_matrix.OSADLCompatibility.YES
+        assert osadl_matrix.get_compatibility("GPL-2.0-or-later", "GPL-2.0-only") == osadl_matrix.OSADLCompatibility.NO
     
 
     def test_GPL_2_0_or_later_GPL_2_0_only_WITH_Classpath_exception_2_0(self):        
@@ -12687,7 +12687,7 @@ class TestSnapshot():
     
 
     def test_GPL_2_0_or_later_GPL_3_0_or_later(self):        
-        assert osadl_matrix.get_compatibility("GPL-2.0-or-later", "GPL-3.0-or-later") == osadl_matrix.OSADLCompatibility.YES
+        assert osadl_matrix.get_compatibility("GPL-2.0-or-later", "GPL-3.0-or-later") == osadl_matrix.OSADLCompatibility.NO
     
 
     def test_GPL_2_0_or_later_HPND(self):        
@@ -12899,11 +12899,11 @@ class TestSnapshot():
     
 
     def test_GPL_3_0_only_AGPL_3_0_only(self):        
-        assert osadl_matrix.get_compatibility("GPL-3.0-only", "AGPL-3.0-only") == osadl_matrix.OSADLCompatibility.YES
+        assert osadl_matrix.get_compatibility("GPL-3.0-only", "AGPL-3.0-only") == osadl_matrix.OSADLCompatibility.CHECKDEP
     
 
     def test_GPL_3_0_only_AGPL_3_0_or_later(self):        
-        assert osadl_matrix.get_compatibility("GPL-3.0-only", "AGPL-3.0-or-later") == osadl_matrix.OSADLCompatibility.NO
+        assert osadl_matrix.get_compatibility("GPL-3.0-only", "AGPL-3.0-or-later") == osadl_matrix.OSADLCompatibility.CHECKDEP
     
 
     def test_GPL_3_0_only_Apache_1_0(self):        
@@ -13015,7 +13015,7 @@ class TestSnapshot():
     
 
     def test_GPL_3_0_only_GPL_1_0_or_later(self):        
-        assert osadl_matrix.get_compatibility("GPL-3.0-only", "GPL-1.0-or-later") == osadl_matrix.OSADLCompatibility.NO
+        assert osadl_matrix.get_compatibility("GPL-3.0-only", "GPL-1.0-or-later") == osadl_matrix.OSADLCompatibility.YES
     
 
     def test_GPL_3_0_only_GPL_2_0_only(self):        
@@ -13247,11 +13247,11 @@ class TestSnapshot():
     
 
     def test_GPL_3_0_or_later_AGPL_3_0_only(self):        
-        assert osadl_matrix.get_compatibility("GPL-3.0-or-later", "AGPL-3.0-only") == osadl_matrix.OSADLCompatibility.NO
+        assert osadl_matrix.get_compatibility("GPL-3.0-or-later", "AGPL-3.0-only") == osadl_matrix.OSADLCompatibility.CHECKDEP
     
 
     def test_GPL_3_0_or_later_AGPL_3_0_or_later(self):        
-        assert osadl_matrix.get_compatibility("GPL-3.0-or-later", "AGPL-3.0-or-later") == osadl_matrix.OSADLCompatibility.YES
+        assert osadl_matrix.get_compatibility("GPL-3.0-or-later", "AGPL-3.0-or-later") == osadl_matrix.OSADLCompatibility.CHECKDEP
     
 
     def test_GPL_3_0_or_later_Apache_1_0(self):        
@@ -13363,7 +13363,7 @@ class TestSnapshot():
     
 
     def test_GPL_3_0_or_later_GPL_1_0_or_later(self):        
-        assert osadl_matrix.get_compatibility("GPL-3.0-or-later", "GPL-1.0-or-later") == osadl_matrix.OSADLCompatibility.NO
+        assert osadl_matrix.get_compatibility("GPL-3.0-or-later", "GPL-1.0-or-later") == osadl_matrix.OSADLCompatibility.YES
     
 
     def test_GPL_3_0_or_later_GPL_2_0_only(self):        
@@ -16031,11 +16031,11 @@ class TestSnapshot():
     
 
     def test_LGPL_2_1_only_AGPL_3_0_only(self):        
-        assert osadl_matrix.get_compatibility("LGPL-2.1-only", "AGPL-3.0-only") == osadl_matrix.OSADLCompatibility.NO
+        assert osadl_matrix.get_compatibility("LGPL-2.1-only", "AGPL-3.0-only") == osadl_matrix.OSADLCompatibility.CHECKDEP
     
 
     def test_LGPL_2_1_only_AGPL_3_0_or_later(self):        
-        assert osadl_matrix.get_compatibility("LGPL-2.1-only", "AGPL-3.0-or-later") == osadl_matrix.OSADLCompatibility.NO
+        assert osadl_matrix.get_compatibility("LGPL-2.1-only", "AGPL-3.0-or-later") == osadl_matrix.OSADLCompatibility.CHECKDEP
     
 
     def test_LGPL_2_1_only_Apache_1_0(self):        
@@ -16379,11 +16379,11 @@ class TestSnapshot():
     
 
     def test_LGPL_2_1_or_later_AGPL_3_0_only(self):        
-        assert osadl_matrix.get_compatibility("LGPL-2.1-or-later", "AGPL-3.0-only") == osadl_matrix.OSADLCompatibility.NO
+        assert osadl_matrix.get_compatibility("LGPL-2.1-or-later", "AGPL-3.0-only") == osadl_matrix.OSADLCompatibility.CHECKDEP
     
 
     def test_LGPL_2_1_or_later_AGPL_3_0_or_later(self):        
-        assert osadl_matrix.get_compatibility("LGPL-2.1-or-later", "AGPL-3.0-or-later") == osadl_matrix.OSADLCompatibility.NO
+        assert osadl_matrix.get_compatibility("LGPL-2.1-or-later", "AGPL-3.0-or-later") == osadl_matrix.OSADLCompatibility.CHECKDEP
     
 
     def test_LGPL_2_1_or_later_Apache_1_0(self):        
@@ -16559,7 +16559,7 @@ class TestSnapshot():
     
 
     def test_LGPL_2_1_or_later_LGPL_3_0_or_later(self):        
-        assert osadl_matrix.get_compatibility("LGPL-2.1-or-later", "LGPL-3.0-or-later") == osadl_matrix.OSADLCompatibility.YES
+        assert osadl_matrix.get_compatibility("LGPL-2.1-or-later", "LGPL-3.0-or-later") == osadl_matrix.OSADLCompatibility.NO
     
 
     def test_LGPL_2_1_or_later_Libpng(self):        
@@ -16727,11 +16727,11 @@ class TestSnapshot():
     
 
     def test_LGPL_3_0_only_AGPL_3_0_only(self):        
-        assert osadl_matrix.get_compatibility("LGPL-3.0-only", "AGPL-3.0-only") == osadl_matrix.OSADLCompatibility.NO
+        assert osadl_matrix.get_compatibility("LGPL-3.0-only", "AGPL-3.0-only") == osadl_matrix.OSADLCompatibility.CHECKDEP
     
 
     def test_LGPL_3_0_only_AGPL_3_0_or_later(self):        
-        assert osadl_matrix.get_compatibility("LGPL-3.0-only", "AGPL-3.0-or-later") == osadl_matrix.OSADLCompatibility.NO
+        assert osadl_matrix.get_compatibility("LGPL-3.0-only", "AGPL-3.0-or-later") == osadl_matrix.OSADLCompatibility.CHECKDEP
     
 
     def test_LGPL_3_0_only_Apache_1_0(self):        
@@ -16899,7 +16899,7 @@ class TestSnapshot():
     
 
     def test_LGPL_3_0_only_LGPL_2_1_or_later(self):        
-        assert osadl_matrix.get_compatibility("LGPL-3.0-only", "LGPL-2.1-or-later") == osadl_matrix.OSADLCompatibility.NO
+        assert osadl_matrix.get_compatibility("LGPL-3.0-only", "LGPL-2.1-or-later") == osadl_matrix.OSADLCompatibility.YES
     
 
     def test_LGPL_3_0_only_LGPL_3_0_only(self):        
@@ -17075,11 +17075,11 @@ class TestSnapshot():
     
 
     def test_LGPL_3_0_or_later_AGPL_3_0_only(self):        
-        assert osadl_matrix.get_compatibility("LGPL-3.0-or-later", "AGPL-3.0-only") == osadl_matrix.OSADLCompatibility.NO
+        assert osadl_matrix.get_compatibility("LGPL-3.0-or-later", "AGPL-3.0-only") == osadl_matrix.OSADLCompatibility.CHECKDEP
     
 
     def test_LGPL_3_0_or_later_AGPL_3_0_or_later(self):        
-        assert osadl_matrix.get_compatibility("LGPL-3.0-or-later", "AGPL-3.0-or-later") == osadl_matrix.OSADLCompatibility.NO
+        assert osadl_matrix.get_compatibility("LGPL-3.0-or-later", "AGPL-3.0-or-later") == osadl_matrix.OSADLCompatibility.CHECKDEP
     
 
     def test_LGPL_3_0_or_later_Apache_1_0(self):        
@@ -17247,7 +17247,7 @@ class TestSnapshot():
     
 
     def test_LGPL_3_0_or_later_LGPL_2_1_or_later(self):        
-        assert osadl_matrix.get_compatibility("LGPL-3.0-or-later", "LGPL-2.1-or-later") == osadl_matrix.OSADLCompatibility.NO
+        assert osadl_matrix.get_compatibility("LGPL-3.0-or-later", "LGPL-2.1-or-later") == osadl_matrix.OSADLCompatibility.YES
     
 
     def test_LGPL_3_0_or_later_LGPL_3_0_only(self):        
