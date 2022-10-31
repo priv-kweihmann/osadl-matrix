@@ -28,17 +28,14 @@ class OSADLCompatibility(Enum):
 
     @staticmethod
     def from_text(_in):
-        if _in == 'Yes':
-            return OSADLCompatibility.YES
-        if _in == 'No':
-            return OSADLCompatibility.NO
-        if _in == 'Unknown':
-            return OSADLCompatibility.UNKNOWN
-        if _in == 'Check dependency':
-            return OSADLCompatibility.CHECKDEP
-        if _in == 'Same':
-            return OSADLCompatibility.YES
-        return OSADLCompatibility.UNDEF
+        _map = {
+            'Yes': OSADLCompatibility.YES,
+            'No': OSADLCompatibility.NO,
+            'Unknown': OSADLCompatibility.UNKNOWN,
+            'Check dependency': OSADLCompatibility.CHECKDEP,
+            'Same': OSADLCompatibility.YES,
+        }
+        return _map.get(_in, OSADLCompatibility.UNDEF)
 
 
 def __read_db(customdb=None):
