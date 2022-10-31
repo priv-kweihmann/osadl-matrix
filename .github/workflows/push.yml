@@ -16,7 +16,7 @@ jobs:
       uses: actions/checkout@master
       with:
         ref: master
-    - uses: dorny/paths-filter@v2.10.2
+    - uses: dorny/paths-filter@v2.11.1
       id: code-changes
       with:
         filters: |
