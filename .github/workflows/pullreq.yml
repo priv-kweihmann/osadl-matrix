@@ -18,6 +18,10 @@ jobs:
         pip3 install -r requirements.txt
         pip3 install -r requirements-dev.txt
       shell: bash
+    - name: lint
+      run: |
+        flake8
+      shell: bash
     - name: build
       run: python3 setup.py build
       shell: bash
