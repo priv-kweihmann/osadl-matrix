@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - master
+  workflow_dispatch:
+  repository_dispatch:
+    types: cron_release
 
 jobs:
   build:
@@ -46,12 +49,12 @@ jobs:
         pytest
       shell: bash
     - name: bump version
-      if: steps.code-changes.outputs.code_changes == 'true'
+      if: steps.code-changes.outputs.code_changes == 'true' || github.event_name == 'workflow_dispatch'
       run: |
         date --utc '+%Y.%m.%d.%H%m%S' | tr -d '\n' > VERSION
       shell: bash
     - name: push
-      if: steps.code-changes.outputs.code_changes == 'true'
+      if: steps.code-changes.outputs.code_changes == 'true' || github.event_name == 'workflow_dispatch'
       uses: github-actions-x/commit@v2.9
       with:
         github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -62,7 +65,7 @@ jobs:
         email: ${{ secrets.COMMITER_MAIL }}
         rebase: 'true'
     - name: tag version
-      if: steps.code-changes.outputs.code_changes == 'true'
+      if: steps.code-changes.outputs.code_changes == 'true' || github.event_name == 'workflow_dispatch'
       uses: butlerlogic/action-autotag@1.1.2
       with:
         GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
@@ -70,11 +73,11 @@ jobs:
         root: "VERSION"
         regex_pattern: '(.*)'
     - name: create sdist release
-      if: steps.code-changes.outputs.code_changes == 'true'
+      if: steps.code-changes.outputs.code_changes == 'true' || github.event_name == 'workflow_dispatch'
       run: python3 setup.py sdist
       shell: bash        
     - name: publish package
-      if: steps.code-changes.outputs.code_changes == 'true'
+      if: steps.code-changes.outputs.code_changes == 'true' || github.event_name == 'workflow_dispatch'
       uses: pypa/gh-action-pypi-publish@release/v1
       with:
         user: __token__

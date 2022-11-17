@@ -48,3 +48,7 @@ jobs:
         name: ${{ secrets.COMMITER_NAME }}
         email: ${{ secrets.COMMITER_MAIL }}
         rebase: 'true'
+    - name: Repository Dispatch
+      uses: peter-evans/repository-dispatch@v2
+      with:
+        event-type: cron_release
