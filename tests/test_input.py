@@ -25,6 +25,8 @@ class TestInput():
         _values = set()
         with open(osadl_matrix.OSADL_MATRIX_JSON) as i:
             for _,v in json.load(i).items():
+                if not isinstance(v, dict):
+                    continue
                 _values.update(v.values())
 
         assert sorted(_values) == sorted(['Check dependency', 'Same', 'Yes', 'No', 'Unknown'])
