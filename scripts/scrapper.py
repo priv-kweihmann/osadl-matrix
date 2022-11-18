@@ -21,7 +21,7 @@ def _get_document():
 def _create_matrix(raw):
     # dump to json
     with open(_DUMP_JSON, 'w') as jsonfile:
-        json.dump(raw, jsonfile, sort_keys=True)
+        json.dump(raw, jsonfile, indent=2, sort_keys=True)
 
     # create a csv
 
