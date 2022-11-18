@@ -25,6 +25,8 @@ def _create_matrix(raw):
 
     # create a csv
 
+    raw = { k:v for k, v in raw.items() if isinstance(v, dict)}
+
     _csv = [
         ['Compatibility*'] + sorted(raw.keys())
     ]
