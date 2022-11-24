@@ -38,5 +38,7 @@ print('class TestSnapshot():')
 
 with open(DATA_FILE) as i:
     for a, v in json.load(i).items():
+        if not isinstance(v, dict):
+            continue
         for b, comp in v.items():
             print(gen_test_case(a, b, comp))

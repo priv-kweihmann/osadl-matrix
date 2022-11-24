@@ -4424,7 +4424,7 @@
     "Artistic-2.0": "Yes",
     "BSD-1-Clause": "Unknown",
     "BSD-2-Clause": "Yes",
-    "BSD-2-Clause-Patent": "Unknown",
+    "BSD-2-Clause-Patent": "Yes",
     "BSD-3-Clause": "Yes",
     "BSD-4-Clause": "No",
     "BSD-4-Clause-UC": "No",
@@ -7830,7 +7830,7 @@
     "zlib-acknowledgement": "Yes"
   },
   "timeformat": "%Y-%m-%dT%H:%M:%S%z",
-  "timestamp": "2022-11-18T11:31:00+00:00",
+  "timestamp": "2022-11-22T10:55:00+00:00",
   "zlib-acknowledgement": {
     "0BSD": "Yes",
     "AFL-2.0": "Yes",

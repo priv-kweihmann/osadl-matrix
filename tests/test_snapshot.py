@@ -334,6 +334,10 @@ class TestSnapshot():
         assert osadl_matrix.get_compatibility("0BSD", "Zlib") == osadl_matrix.OSADLCompatibility.YES
     
 
+    def test_0BSD_blessing(self):        
+        assert osadl_matrix.get_compatibility("0BSD", "blessing") == osadl_matrix.OSADLCompatibility.YES
+    
+
     def test_0BSD_bzip2_1_0_5(self):        
         assert osadl_matrix.get_compatibility("0BSD", "bzip2-1.0.5") == osadl_matrix.OSADLCompatibility.YES
     
@@ -680,6 +684,10 @@ class TestSnapshot():
 
     def test_AFL_2_0_Zlib(self):        
         assert osadl_matrix.get_compatibility("AFL-2.0", "Zlib") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_AFL_2_0_blessing(self):        
+        assert osadl_matrix.get_compatibility("AFL-2.0", "blessing") == osadl_matrix.OSADLCompatibility.YES
     
 
     def test_AFL_2_0_bzip2_1_0_5(self):        
@@ -1030,6 +1038,10 @@ class TestSnapshot():
         assert osadl_matrix.get_compatibility("AFL-2.1", "Zlib") == osadl_matrix.OSADLCompatibility.YES
     
 
+    def test_AFL_2_1_blessing(self):        
+        assert osadl_matrix.get_compatibility("AFL-2.1", "blessing") == osadl_matrix.OSADLCompatibility.YES
+    
+
     def test_AFL_2_1_bzip2_1_0_5(self):        
         assert osadl_matrix.get_compatibility("AFL-2.1", "bzip2-1.0.5") == osadl_matrix.OSADLCompatibility.YES
     
@@ -1376,6 +1388,10 @@ class TestSnapshot():
 
     def test_AFL_3_0_Zlib(self):        
         assert osadl_matrix.get_compatibility("AFL-3.0", "Zlib") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_AFL_3_0_blessing(self):        
+        assert osadl_matrix.get_compatibility("AFL-3.0", "blessing") == osadl_matrix.OSADLCompatibility.YES
     
 
     def test_AFL_3_0_bzip2_1_0_5(self):        
@@ -1726,6 +1742,10 @@ class TestSnapshot():
         assert osadl_matrix.get_compatibility("AGPL-3.0-only", "Zlib") == osadl_matrix.OSADLCompatibility.YES
     
 
+    def test_AGPL_3_0_only_blessing(self):        
+        assert osadl_matrix.get_compatibility("AGPL-3.0-only", "blessing") == osadl_matrix.OSADLCompatibility.YES
+    
+
     def test_AGPL_3_0_only_bzip2_1_0_5(self):        
         assert osadl_matrix.get_compatibility("AGPL-3.0-only", "bzip2-1.0.5") == osadl_matrix.OSADLCompatibility.YES
     
@@ -2072,6 +2092,10 @@ class TestSnapshot():
 
     def test_AGPL_3_0_or_later_Zlib(self):        
         assert osadl_matrix.get_compatibility("AGPL-3.0-or-later", "Zlib") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_AGPL_3_0_or_later_blessing(self):        
+        assert osadl_matrix.get_compatibility("AGPL-3.0-or-later", "blessing") == osadl_matrix.OSADLCompatibility.YES
     
 
     def test_AGPL_3_0_or_later_bzip2_1_0_5(self):        
@@ -2422,6 +2446,10 @@ class TestSnapshot():
         assert osadl_matrix.get_compatibility("Apache-1.0", "Zlib") == osadl_matrix.OSADLCompatibility.YES
     
 
+    def test_Apache_1_0_blessing(self):        
+        assert osadl_matrix.get_compatibility("Apache-1.0", "blessing") == osadl_matrix.OSADLCompatibility.YES
+    
+
     def test_Apache_1_0_bzip2_1_0_5(self):        
         assert osadl_matrix.get_compatibility("Apache-1.0", "bzip2-1.0.5") == osadl_matrix.OSADLCompatibility.YES
     
@@ -2768,6 +2796,10 @@ class TestSnapshot():
 
     def test_Apache_1_1_Zlib(self):        
         assert osadl_matrix.get_compatibility("Apache-1.1", "Zlib") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_Apache_1_1_blessing(self):        
+        assert osadl_matrix.get_compatibility("Apache-1.1", "blessing") == osadl_matrix.OSADLCompatibility.YES
     
 
     def test_Apache_1_1_bzip2_1_0_5(self):        
@@ -3118,6 +3150,10 @@ class TestSnapshot():
         assert osadl_matrix.get_compatibility("Apache-2.0", "Zlib") == osadl_matrix.OSADLCompatibility.YES
     
 
+    def test_Apache_2_0_blessing(self):        
+        assert osadl_matrix.get_compatibility("Apache-2.0", "blessing") == osadl_matrix.OSADLCompatibility.YES
+    
+
     def test_Apache_2_0_bzip2_1_0_5(self):        
         assert osadl_matrix.get_compatibility("Apache-2.0", "bzip2-1.0.5") == osadl_matrix.OSADLCompatibility.YES
     
@@ -3464,6 +3500,10 @@ class TestSnapshot():
 
     def test_Artistic_1_0_Zlib(self):        
         assert osadl_matrix.get_compatibility("Artistic-1.0", "Zlib") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_Artistic_1_0_blessing(self):        
+        assert osadl_matrix.get_compatibility("Artistic-1.0", "blessing") == osadl_matrix.OSADLCompatibility.YES
     
 
     def test_Artistic_1_0_bzip2_1_0_5(self):        
@@ -3814,6 +3854,10 @@ class TestSnapshot():
         assert osadl_matrix.get_compatibility("Artistic-1.0-Perl", "Zlib") == osadl_matrix.OSADLCompatibility.YES
     
 
+    def test_Artistic_1_0_Perl_blessing(self):        
+        assert osadl_matrix.get_compatibility("Artistic-1.0-Perl", "blessing") == osadl_matrix.OSADLCompatibility.YES
+    
+
     def test_Artistic_1_0_Perl_bzip2_1_0_5(self):        
         assert osadl_matrix.get_compatibility("Artistic-1.0-Perl", "bzip2-1.0.5") == osadl_matrix.OSADLCompatibility.YES
     
@@ -4160,6 +4204,10 @@ class TestSnapshot():
 
     def test_Artistic_2_0_Zlib(self):        
         assert osadl_matrix.get_compatibility("Artistic-2.0", "Zlib") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_Artistic_2_0_blessing(self):        
+        assert osadl_matrix.get_compatibility("Artistic-2.0", "blessing") == osadl_matrix.OSADLCompatibility.YES
     
 
     def test_Artistic_2_0_bzip2_1_0_5(self):        
@@ -4510,6 +4558,10 @@ class TestSnapshot():
         assert osadl_matrix.get_compatibility("BSD-1-Clause", "Zlib") == osadl_matrix.OSADLCompatibility.YES
     
 
+    def test_BSD_1_Clause_blessing(self):        
+        assert osadl_matrix.get_compatibility("BSD-1-Clause", "blessing") == osadl_matrix.OSADLCompatibility.YES
+    
+
     def test_BSD_1_Clause_bzip2_1_0_5(self):        
         assert osadl_matrix.get_compatibility("BSD-1-Clause", "bzip2-1.0.5") == osadl_matrix.OSADLCompatibility.YES
     
@@ -4856,6 +4908,10 @@ class TestSnapshot():
 
     def test_BSD_2_Clause_Zlib(self):        
         assert osadl_matrix.get_compatibility("BSD-2-Clause", "Zlib") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_BSD_2_Clause_blessing(self):        
+        assert osadl_matrix.get_compatibility("BSD-2-Clause", "blessing") == osadl_matrix.OSADLCompatibility.YES
     
 
     def test_BSD_2_Clause_bzip2_1_0_5(self):        
@@ -5206,6 +5262,10 @@ class TestSnapshot():
         assert osadl_matrix.get_compatibility("BSD-2-Clause-Patent", "Zlib") == osadl_matrix.OSADLCompatibility.YES
     
 
+    def test_BSD_2_Clause_Patent_blessing(self):        
+        assert osadl_matrix.get_compatibility("BSD-2-Clause-Patent", "blessing") == osadl_matrix.OSADLCompatibility.YES
+    
+
     def test_BSD_2_Clause_Patent_bzip2_1_0_5(self):        
         assert osadl_matrix.get_compatibility("BSD-2-Clause-Patent", "bzip2-1.0.5") == osadl_matrix.OSADLCompatibility.YES
     
@@ -5552,6 +5612,10 @@ class TestSnapshot():
 
     def test_BSD_3_Clause_Zlib(self):        
         assert osadl_matrix.get_compatibility("BSD-3-Clause", "Zlib") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_BSD_3_Clause_blessing(self):        
+        assert osadl_matrix.get_compatibility("BSD-3-Clause", "blessing") == osadl_matrix.OSADLCompatibility.YES
     
 
     def test_BSD_3_Clause_bzip2_1_0_5(self):        
@@ -5902,6 +5966,10 @@ class TestSnapshot():
         assert osadl_matrix.get_compatibility("BSD-4-Clause", "Zlib") == osadl_matrix.OSADLCompatibility.YES
     
 
+    def test_BSD_4_Clause_blessing(self):        
+        assert osadl_matrix.get_compatibility("BSD-4-Clause", "blessing") == osadl_matrix.OSADLCompatibility.YES
+    
+
     def test_BSD_4_Clause_bzip2_1_0_5(self):        
         assert osadl_matrix.get_compatibility("BSD-4-Clause", "bzip2-1.0.5") == osadl_matrix.OSADLCompatibility.YES
     
@@ -6248,6 +6316,10 @@ class TestSnapshot():
 
     def test_BSD_4_Clause_UC_Zlib(self):        
         assert osadl_matrix.get_compatibility("BSD-4-Clause-UC", "Zlib") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_BSD_4_Clause_UC_blessing(self):        
+        assert osadl_matrix.get_compatibility("BSD-4-Clause-UC", "blessing") == osadl_matrix.OSADLCompatibility.YES
     
 
     def test_BSD_4_Clause_UC_bzip2_1_0_5(self):        
@@ -6598,6 +6670,10 @@ class TestSnapshot():
         assert osadl_matrix.get_compatibility("BSD-Source-Code", "Zlib") == osadl_matrix.OSADLCompatibility.YES
     
 
+    def test_BSD_Source_Code_blessing(self):        
+        assert osadl_matrix.get_compatibility("BSD-Source-Code", "blessing") == osadl_matrix.OSADLCompatibility.YES
+    
+
     def test_BSD_Source_Code_bzip2_1_0_5(self):        
         assert osadl_matrix.get_compatibility("BSD-Source-Code", "bzip2-1.0.5") == osadl_matrix.OSADLCompatibility.YES
     
@@ -6944,6 +7020,10 @@ class TestSnapshot():
 
     def test_BSL_1_0_Zlib(self):        
         assert osadl_matrix.get_compatibility("BSL-1.0", "Zlib") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_BSL_1_0_blessing(self):        
+        assert osadl_matrix.get_compatibility("BSL-1.0", "blessing") == osadl_matrix.OSADLCompatibility.YES
     
 
     def test_BSL_1_0_bzip2_1_0_5(self):        
@@ -7294,6 +7374,10 @@ class TestSnapshot():
         assert osadl_matrix.get_compatibility("CC0-1.0", "Zlib") == osadl_matrix.OSADLCompatibility.YES
     
 
+    def test_CC0_1_0_blessing(self):        
+        assert osadl_matrix.get_compatibility("CC0-1.0", "blessing") == osadl_matrix.OSADLCompatibility.YES
+    
+
     def test_CC0_1_0_bzip2_1_0_5(self):        
         assert osadl_matrix.get_compatibility("CC0-1.0", "bzip2-1.0.5") == osadl_matrix.OSADLCompatibility.YES
     
@@ -7640,6 +7724,10 @@ class TestSnapshot():
 
     def test_CDDL_1_0_Zlib(self):        
         assert osadl_matrix.get_compatibility("CDDL-1.0", "Zlib") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_CDDL_1_0_blessing(self):        
+        assert osadl_matrix.get_compatibility("CDDL-1.0", "blessing") == osadl_matrix.OSADLCompatibility.YES
     
 
     def test_CDDL_1_0_bzip2_1_0_5(self):        
@@ -7990,6 +8078,10 @@ class TestSnapshot():
         assert osadl_matrix.get_compatibility("CDDL-1.1", "Zlib") == osadl_matrix.OSADLCompatibility.YES
     
 
+    def test_CDDL_1_1_blessing(self):        
+        assert osadl_matrix.get_compatibility("CDDL-1.1", "blessing") == osadl_matrix.OSADLCompatibility.YES
+    
+
     def test_CDDL_1_1_bzip2_1_0_5(self):        
         assert osadl_matrix.get_compatibility("CDDL-1.1", "bzip2-1.0.5") == osadl_matrix.OSADLCompatibility.YES
     
@@ -8336,6 +8428,10 @@ class TestSnapshot():
 
     def test_CPL_1_0_Zlib(self):        
         assert osadl_matrix.get_compatibility("CPL-1.0", "Zlib") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_CPL_1_0_blessing(self):        
+        assert osadl_matrix.get_compatibility("CPL-1.0", "blessing") == osadl_matrix.OSADLCompatibility.YES
     
 
     def test_CPL_1_0_bzip2_1_0_5(self):        
@@ -8686,6 +8782,10 @@ class TestSnapshot():
         assert osadl_matrix.get_compatibility("EFL-2.0", "Zlib") == osadl_matrix.OSADLCompatibility.YES
     
 
+    def test_EFL_2_0_blessing(self):        
+        assert osadl_matrix.get_compatibility("EFL-2.0", "blessing") == osadl_matrix.OSADLCompatibility.YES
+    
+
     def test_EFL_2_0_bzip2_1_0_5(self):        
         assert osadl_matrix.get_compatibility("EFL-2.0", "bzip2-1.0.5") == osadl_matrix.OSADLCompatibility.YES
     
@@ -9032,6 +9132,10 @@ class TestSnapshot():
 
     def test_EPL_1_0_Zlib(self):        
         assert osadl_matrix.get_compatibility("EPL-1.0", "Zlib") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_EPL_1_0_blessing(self):        
+        assert osadl_matrix.get_compatibility("EPL-1.0", "blessing") == osadl_matrix.OSADLCompatibility.YES
     
 
     def test_EPL_1_0_bzip2_1_0_5(self):        
@@ -9382,6 +9486,10 @@ class TestSnapshot():
         assert osadl_matrix.get_compatibility("EPL-2.0", "Zlib") == osadl_matrix.OSADLCompatibility.YES
     
 
+    def test_EPL_2_0_blessing(self):        
+        assert osadl_matrix.get_compatibility("EPL-2.0", "blessing") == osadl_matrix.OSADLCompatibility.YES
+    
+
     def test_EPL_2_0_bzip2_1_0_5(self):        
         assert osadl_matrix.get_compatibility("EPL-2.0", "bzip2-1.0.5") == osadl_matrix.OSADLCompatibility.YES
     
@@ -9728,6 +9836,10 @@ class TestSnapshot():
 
     def test_EUPL_1_1_Zlib(self):        
         assert osadl_matrix.get_compatibility("EUPL-1.1", "Zlib") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_EUPL_1_1_blessing(self):        
+        assert osadl_matrix.get_compatibility("EUPL-1.1", "blessing") == osadl_matrix.OSADLCompatibility.YES
     
 
     def test_EUPL_1_1_bzip2_1_0_5(self):        
@@ -10078,6 +10190,10 @@ class TestSnapshot():
         assert osadl_matrix.get_compatibility("EUPL-1.2", "Zlib") == osadl_matrix.OSADLCompatibility.YES
     
 
+    def test_EUPL_1_2_blessing(self):        
+        assert osadl_matrix.get_compatibility("EUPL-1.2", "blessing") == osadl_matrix.OSADLCompatibility.YES
+    
+
     def test_EUPL_1_2_bzip2_1_0_5(self):        
         assert osadl_matrix.get_compatibility("EUPL-1.2", "bzip2-1.0.5") == osadl_matrix.OSADLCompatibility.YES
     
@@ -10424,6 +10540,10 @@ class TestSnapshot():
 
     def test_FSFAP_Zlib(self):        
         assert osadl_matrix.get_compatibility("FSFAP", "Zlib") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_FSFAP_blessing(self):        
+        assert osadl_matrix.get_compatibility("FSFAP", "blessing") == osadl_matrix.OSADLCompatibility.YES
     
 
     def test_FSFAP_bzip2_1_0_5(self):        
@@ -10774,6 +10894,10 @@ class TestSnapshot():
         assert osadl_matrix.get_compatibility("FSFULLR", "Zlib") == osadl_matrix.OSADLCompatibility.YES
     
 
+    def test_FSFULLR_blessing(self):        
+        assert osadl_matrix.get_compatibility("FSFULLR", "blessing") == osadl_matrix.OSADLCompatibility.YES
+    
+
     def test_FSFULLR_bzip2_1_0_5(self):        
         assert osadl_matrix.get_compatibility("FSFULLR", "bzip2-1.0.5") == osadl_matrix.OSADLCompatibility.YES
     
@@ -11120,6 +11244,10 @@ class TestSnapshot():
 
     def test_FTL_Zlib(self):        
         assert osadl_matrix.get_compatibility("FTL", "Zlib") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_FTL_blessing(self):        
+        assert osadl_matrix.get_compatibility("FTL", "blessing") == osadl_matrix.OSADLCompatibility.YES
     
 
     def test_FTL_bzip2_1_0_5(self):        
@@ -11470,6 +11598,10 @@ class TestSnapshot():
         assert osadl_matrix.get_compatibility("GPL-1.0-only", "Zlib") == osadl_matrix.OSADLCompatibility.YES
     
 
+    def test_GPL_1_0_only_blessing(self):        
+        assert osadl_matrix.get_compatibility("GPL-1.0-only", "blessing") == osadl_matrix.OSADLCompatibility.YES
+    
+
     def test_GPL_1_0_only_bzip2_1_0_5(self):        
         assert osadl_matrix.get_compatibility("GPL-1.0-only", "bzip2-1.0.5") == osadl_matrix.OSADLCompatibility.YES
     
@@ -11816,6 +11948,10 @@ class TestSnapshot():
 
     def test_GPL_1_0_or_later_Zlib(self):        
         assert osadl_matrix.get_compatibility("GPL-1.0-or-later", "Zlib") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_GPL_1_0_or_later_blessing(self):        
+        assert osadl_matrix.get_compatibility("GPL-1.0-or-later", "blessing") == osadl_matrix.OSADLCompatibility.YES
     
 
     def test_GPL_1_0_or_later_bzip2_1_0_5(self):        
@@ -12166,6 +12302,10 @@ class TestSnapshot():
         assert osadl_matrix.get_compatibility("GPL-2.0-only", "Zlib") == osadl_matrix.OSADLCompatibility.YES
     
 
+    def test_GPL_2_0_only_blessing(self):        
+        assert osadl_matrix.get_compatibility("GPL-2.0-only", "blessing") == osadl_matrix.OSADLCompatibility.YES
+    
+
     def test_GPL_2_0_only_bzip2_1_0_5(self):        
         assert osadl_matrix.get_compatibility("GPL-2.0-only", "bzip2-1.0.5") == osadl_matrix.OSADLCompatibility.YES
     
@@ -12512,6 +12652,10 @@ class TestSnapshot():
 
     def test_GPL_2_0_only_WITH_Classpath_exception_2_0_Zlib(self):        
         assert osadl_matrix.get_compatibility("GPL-2.0-only WITH Classpath-exception-2.0", "Zlib") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_GPL_2_0_only_WITH_Classpath_exception_2_0_blessing(self):        
+        assert osadl_matrix.get_compatibility("GPL-2.0-only WITH Classpath-exception-2.0", "blessing") == osadl_matrix.OSADLCompatibility.YES
     
 
     def test_GPL_2_0_only_WITH_Classpath_exception_2_0_bzip2_1_0_5(self):        
@@ -12862,6 +13006,10 @@ class TestSnapshot():
         assert osadl_matrix.get_compatibility("GPL-2.0-or-later", "Zlib") == osadl_matrix.OSADLCompatibility.YES
     
 
+    def test_GPL_2_0_or_later_blessing(self):        
+        assert osadl_matrix.get_compatibility("GPL-2.0-or-later", "blessing") == osadl_matrix.OSADLCompatibility.YES
+    
+
     def test_GPL_2_0_or_later_bzip2_1_0_5(self):        
         assert osadl_matrix.get_compatibility("GPL-2.0-or-later", "bzip2-1.0.5") == osadl_matrix.OSADLCompatibility.YES
     
@@ -13208,6 +13356,10 @@ class TestSnapshot():
 
     def test_GPL_3_0_only_Zlib(self):        
         assert osadl_matrix.get_compatibility("GPL-3.0-only", "Zlib") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_GPL_3_0_only_blessing(self):        
+        assert osadl_matrix.get_compatibility("GPL-3.0-only", "blessing") == osadl_matrix.OSADLCompatibility.YES
     
 
     def test_GPL_3_0_only_bzip2_1_0_5(self):        
@@ -13558,6 +13710,10 @@ class TestSnapshot():
         assert osadl_matrix.get_compatibility("GPL-3.0-or-later", "Zlib") == osadl_matrix.OSADLCompatibility.YES
     
 
+    def test_GPL_3_0_or_later_blessing(self):        
+        assert osadl_matrix.get_compatibility("GPL-3.0-or-later", "blessing") == osadl_matrix.OSADLCompatibility.YES
+    
+
     def test_GPL_3_0_or_later_bzip2_1_0_5(self):        
         assert osadl_matrix.get_compatibility("GPL-3.0-or-later", "bzip2-1.0.5") == osadl_matrix.OSADLCompatibility.YES
     
@@ -13904,6 +14060,10 @@ class TestSnapshot():
 
     def test_HPND_Zlib(self):        
         assert osadl_matrix.get_compatibility("HPND", "Zlib") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_HPND_blessing(self):        
+        assert osadl_matrix.get_compatibility("HPND", "blessing") == osadl_matrix.OSADLCompatibility.YES
     
 
     def test_HPND_bzip2_1_0_5(self):        
@@ -14254,6 +14414,10 @@ class TestSnapshot():
         assert osadl_matrix.get_compatibility("IBM-pibs", "Zlib") == osadl_matrix.OSADLCompatibility.YES
     
 
+    def test_IBM_pibs_blessing(self):        
+        assert osadl_matrix.get_compatibility("IBM-pibs", "blessing") == osadl_matrix.OSADLCompatibility.YES
+    
+
     def test_IBM_pibs_bzip2_1_0_5(self):        
         assert osadl_matrix.get_compatibility("IBM-pibs", "bzip2-1.0.5") == osadl_matrix.OSADLCompatibility.YES
     
@@ -14600,6 +14764,10 @@ class TestSnapshot():
 
     def test_ICU_Zlib(self):        
         assert osadl_matrix.get_compatibility("ICU", "Zlib") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_ICU_blessing(self):        
+        assert osadl_matrix.get_compatibility("ICU", "blessing") == osadl_matrix.OSADLCompatibility.YES
     
 
     def test_ICU_bzip2_1_0_5(self):        
@@ -14950,6 +15118,10 @@ class TestSnapshot():
         assert osadl_matrix.get_compatibility("IJG", "Zlib") == osadl_matrix.OSADLCompatibility.YES
     
 
+    def test_IJG_blessing(self):        
+        assert osadl_matrix.get_compatibility("IJG", "blessing") == osadl_matrix.OSADLCompatibility.YES
+    
+
     def test_IJG_bzip2_1_0_5(self):        
         assert osadl_matrix.get_compatibility("IJG", "bzip2-1.0.5") == osadl_matrix.OSADLCompatibility.YES
     
@@ -15296,6 +15468,10 @@ class TestSnapshot():
 
     def test_IPL_1_0_Zlib(self):        
         assert osadl_matrix.get_compatibility("IPL-1.0", "Zlib") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_IPL_1_0_blessing(self):        
+        assert osadl_matrix.get_compatibility("IPL-1.0", "blessing") == osadl_matrix.OSADLCompatibility.YES
     
 
     def test_IPL_1_0_bzip2_1_0_5(self):        
@@ -15646,6 +15822,10 @@ class TestSnapshot():
         assert osadl_matrix.get_compatibility("ISC", "Zlib") == osadl_matrix.OSADLCompatibility.YES
     
 
+    def test_ISC_blessing(self):        
+        assert osadl_matrix.get_compatibility("ISC", "blessing") == osadl_matrix.OSADLCompatibility.YES
+    
+
     def test_ISC_bzip2_1_0_5(self):        
         assert osadl_matrix.get_compatibility("ISC", "bzip2-1.0.5") == osadl_matrix.OSADLCompatibility.YES
     
@@ -15992,6 +16172,10 @@ class TestSnapshot():
 
     def test_Info_ZIP_Zlib(self):        
         assert osadl_matrix.get_compatibility("Info-ZIP", "Zlib") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_Info_ZIP_blessing(self):        
+        assert osadl_matrix.get_compatibility("Info-ZIP", "blessing") == osadl_matrix.OSADLCompatibility.YES
     
 
     def test_Info_ZIP_bzip2_1_0_5(self):        
@@ -16342,6 +16526,10 @@ class TestSnapshot():
         assert osadl_matrix.get_compatibility("LGPL-2.1-only", "Zlib") == osadl_matrix.OSADLCompatibility.YES
     
 
+    def test_LGPL_2_1_only_blessing(self):        
+        assert osadl_matrix.get_compatibility("LGPL-2.1-only", "blessing") == osadl_matrix.OSADLCompatibility.YES
+    
+
     def test_LGPL_2_1_only_bzip2_1_0_5(self):        
         assert osadl_matrix.get_compatibility("LGPL-2.1-only", "bzip2-1.0.5") == osadl_matrix.OSADLCompatibility.YES
     
@@ -16688,6 +16876,10 @@ class TestSnapshot():
 
     def test_LGPL_2_1_or_later_Zlib(self):        
         assert osadl_matrix.get_compatibility("LGPL-2.1-or-later", "Zlib") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_LGPL_2_1_or_later_blessing(self):        
+        assert osadl_matrix.get_compatibility("LGPL-2.1-or-later", "blessing") == osadl_matrix.OSADLCompatibility.YES
     
 
     def test_LGPL_2_1_or_later_bzip2_1_0_5(self):        
@@ -17038,6 +17230,10 @@ class TestSnapshot():
         assert osadl_matrix.get_compatibility("LGPL-3.0-only", "Zlib") == osadl_matrix.OSADLCompatibility.YES
     
 
+    def test_LGPL_3_0_only_blessing(self):        
+        assert osadl_matrix.get_compatibility("LGPL-3.0-only", "blessing") == osadl_matrix.OSADLCompatibility.YES
+    
+
     def test_LGPL_3_0_only_bzip2_1_0_5(self):        
         assert osadl_matrix.get_compatibility("LGPL-3.0-only", "bzip2-1.0.5") == osadl_matrix.OSADLCompatibility.YES
     
@@ -17115,7 +17311,7 @@ class TestSnapshot():
     
 
     def test_LGPL_3_0_or_later_BSD_2_Clause_Patent(self):        
-        assert osadl_matrix.get_compatibility("LGPL-3.0-or-later", "BSD-2-Clause-Patent") == osadl_matrix.OSADLCompatibility.UNKNOWN
+        assert osadl_matrix.get_compatibility("LGPL-3.0-or-later", "BSD-2-Clause-Patent") == osadl_matrix.OSADLCompatibility.YES
     
 
     def test_LGPL_3_0_or_later_BSD_3_Clause(self):        
@@ -17384,6 +17580,10 @@ class TestSnapshot():
 
     def test_LGPL_3_0_or_later_Zlib(self):        
         assert osadl_matrix.get_compatibility("LGPL-3.0-or-later", "Zlib") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_LGPL_3_0_or_later_blessing(self):        
+        assert osadl_matrix.get_compatibility("LGPL-3.0-or-later", "blessing") == osadl_matrix.OSADLCompatibility.YES
     
 
     def test_LGPL_3_0_or_later_bzip2_1_0_5(self):        
@@ -17734,6 +17934,10 @@ class TestSnapshot():
         assert osadl_matrix.get_compatibility("Libpng", "Zlib") == osadl_matrix.OSADLCompatibility.YES
     
 
+    def test_Libpng_blessing(self):        
+        assert osadl_matrix.get_compatibility("Libpng", "blessing") == osadl_matrix.OSADLCompatibility.YES
+    
+
     def test_Libpng_bzip2_1_0_5(self):        
         assert osadl_matrix.get_compatibility("Libpng", "bzip2-1.0.5") == osadl_matrix.OSADLCompatibility.YES
     
@@ -18080,6 +18284,10 @@ class TestSnapshot():
 
     def test_MIT_Zlib(self):        
         assert osadl_matrix.get_compatibility("MIT", "Zlib") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_MIT_blessing(self):        
+        assert osadl_matrix.get_compatibility("MIT", "blessing") == osadl_matrix.OSADLCompatibility.YES
     
 
     def test_MIT_bzip2_1_0_5(self):        
@@ -18430,6 +18638,10 @@ class TestSnapshot():
         assert osadl_matrix.get_compatibility("MIT-CMU", "Zlib") == osadl_matrix.OSADLCompatibility.YES
     
 
+    def test_MIT_CMU_blessing(self):        
+        assert osadl_matrix.get_compatibility("MIT-CMU", "blessing") == osadl_matrix.OSADLCompatibility.YES
+    
+
     def test_MIT_CMU_bzip2_1_0_5(self):        
         assert osadl_matrix.get_compatibility("MIT-CMU", "bzip2-1.0.5") == osadl_matrix.OSADLCompatibility.YES
     
@@ -18776,6 +18988,10 @@ class TestSnapshot():
 
     def test_MPL_1_1_Zlib(self):        
         assert osadl_matrix.get_compatibility("MPL-1.1", "Zlib") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_MPL_1_1_blessing(self):        
+        assert osadl_matrix.get_compatibility("MPL-1.1", "blessing") == osadl_matrix.OSADLCompatibility.YES
     
 
     def test_MPL_1_1_bzip2_1_0_5(self):        
@@ -19126,6 +19342,10 @@ class TestSnapshot():
         assert osadl_matrix.get_compatibility("MPL-2.0", "Zlib") == osadl_matrix.OSADLCompatibility.YES
     
 
+    def test_MPL_2_0_blessing(self):        
+        assert osadl_matrix.get_compatibility("MPL-2.0", "blessing") == osadl_matrix.OSADLCompatibility.YES
+    
+
     def test_MPL_2_0_bzip2_1_0_5(self):        
         assert osadl_matrix.get_compatibility("MPL-2.0", "bzip2-1.0.5") == osadl_matrix.OSADLCompatibility.YES
     
@@ -19472,6 +19692,10 @@ class TestSnapshot():
 
     def test_MPL_2_0_no_copyleft_exception_Zlib(self):        
         assert osadl_matrix.get_compatibility("MPL-2.0-no-copyleft-exception", "Zlib") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_MPL_2_0_no_copyleft_exception_blessing(self):        
+        assert osadl_matrix.get_compatibility("MPL-2.0-no-copyleft-exception", "blessing") == osadl_matrix.OSADLCompatibility.YES
     
 
     def test_MPL_2_0_no_copyleft_exception_bzip2_1_0_5(self):        
@@ -19822,6 +20046,10 @@ class TestSnapshot():
         assert osadl_matrix.get_compatibility("MS-PL", "Zlib") == osadl_matrix.OSADLCompatibility.YES
     
 
+    def test_MS_PL_blessing(self):        
+        assert osadl_matrix.get_compatibility("MS-PL", "blessing") == osadl_matrix.OSADLCompatibility.YES
+    
+
     def test_MS_PL_bzip2_1_0_5(self):        
         assert osadl_matrix.get_compatibility("MS-PL", "bzip2-1.0.5") == osadl_matrix.OSADLCompatibility.YES
     
@@ -20168,6 +20396,10 @@ class TestSnapshot():
 
     def test_MS_RL_Zlib(self):        
         assert osadl_matrix.get_compatibility("MS-RL", "Zlib") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_MS_RL_blessing(self):        
+        assert osadl_matrix.get_compatibility("MS-RL", "blessing") == osadl_matrix.OSADLCompatibility.YES
     
 
     def test_MS_RL_bzip2_1_0_5(self):        
@@ -20518,6 +20750,10 @@ class TestSnapshot():
         assert osadl_matrix.get_compatibility("MirOS", "Zlib") == osadl_matrix.OSADLCompatibility.YES
     
 
+    def test_MirOS_blessing(self):        
+        assert osadl_matrix.get_compatibility("MirOS", "blessing") == osadl_matrix.OSADLCompatibility.YES
+    
+
     def test_MirOS_bzip2_1_0_5(self):        
         assert osadl_matrix.get_compatibility("MirOS", "bzip2-1.0.5") == osadl_matrix.OSADLCompatibility.YES
     
@@ -20864,6 +21100,10 @@ class TestSnapshot():
 
     def test_NBPL_1_0_Zlib(self):        
         assert osadl_matrix.get_compatibility("NBPL-1.0", "Zlib") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_NBPL_1_0_blessing(self):        
+        assert osadl_matrix.get_compatibility("NBPL-1.0", "blessing") == osadl_matrix.OSADLCompatibility.YES
     
 
     def test_NBPL_1_0_bzip2_1_0_5(self):        
@@ -21214,6 +21454,10 @@ class TestSnapshot():
         assert osadl_matrix.get_compatibility("NTP", "Zlib") == osadl_matrix.OSADLCompatibility.YES
     
 
+    def test_NTP_blessing(self):        
+        assert osadl_matrix.get_compatibility("NTP", "blessing") == osadl_matrix.OSADLCompatibility.YES
+    
+
     def test_NTP_bzip2_1_0_5(self):        
         assert osadl_matrix.get_compatibility("NTP", "bzip2-1.0.5") == osadl_matrix.OSADLCompatibility.YES
     
@@ -21560,6 +21804,10 @@ class TestSnapshot():
 
     def test_OSL_3_0_Zlib(self):        
         assert osadl_matrix.get_compatibility("OSL-3.0", "Zlib") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_OSL_3_0_blessing(self):        
+        assert osadl_matrix.get_compatibility("OSL-3.0", "blessing") == osadl_matrix.OSADLCompatibility.YES
     
 
     def test_OSL_3_0_bzip2_1_0_5(self):        
@@ -21910,6 +22158,10 @@ class TestSnapshot():
         assert osadl_matrix.get_compatibility("OpenSSL", "Zlib") == osadl_matrix.OSADLCompatibility.YES
     
 
+    def test_OpenSSL_blessing(self):        
+        assert osadl_matrix.get_compatibility("OpenSSL", "blessing") == osadl_matrix.OSADLCompatibility.YES
+    
+
     def test_OpenSSL_bzip2_1_0_5(self):        
         assert osadl_matrix.get_compatibility("OpenSSL", "bzip2-1.0.5") == osadl_matrix.OSADLCompatibility.YES
     
@@ -22256,6 +22508,10 @@ class TestSnapshot():
 
     def test_PHP_3_01_Zlib(self):        
         assert osadl_matrix.get_compatibility("PHP-3.01", "Zlib") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_PHP_3_01_blessing(self):        
+        assert osadl_matrix.get_compatibility("PHP-3.01", "blessing") == osadl_matrix.OSADLCompatibility.YES
     
 
     def test_PHP_3_01_bzip2_1_0_5(self):        
@@ -22606,6 +22862,10 @@ class TestSnapshot():
         assert osadl_matrix.get_compatibility("PostgreSQL", "Zlib") == osadl_matrix.OSADLCompatibility.YES
     
 
+    def test_PostgreSQL_blessing(self):        
+        assert osadl_matrix.get_compatibility("PostgreSQL", "blessing") == osadl_matrix.OSADLCompatibility.YES
+    
+
     def test_PostgreSQL_bzip2_1_0_5(self):        
         assert osadl_matrix.get_compatibility("PostgreSQL", "bzip2-1.0.5") == osadl_matrix.OSADLCompatibility.YES
     
@@ -22952,6 +23212,10 @@ class TestSnapshot():
 
     def test_Python_2_0_Zlib(self):        
         assert osadl_matrix.get_compatibility("Python-2.0", "Zlib") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_Python_2_0_blessing(self):        
+        assert osadl_matrix.get_compatibility("Python-2.0", "blessing") == osadl_matrix.OSADLCompatibility.YES
     
 
     def test_Python_2_0_bzip2_1_0_5(self):        
@@ -23302,6 +23566,10 @@ class TestSnapshot():
         assert osadl_matrix.get_compatibility("Qhull", "Zlib") == osadl_matrix.OSADLCompatibility.YES
     
 
+    def test_Qhull_blessing(self):        
+        assert osadl_matrix.get_compatibility("Qhull", "blessing") == osadl_matrix.OSADLCompatibility.YES
+    
+
     def test_Qhull_bzip2_1_0_5(self):        
         assert osadl_matrix.get_compatibility("Qhull", "bzip2-1.0.5") == osadl_matrix.OSADLCompatibility.YES
     
@@ -23648,6 +23916,10 @@ class TestSnapshot():
 
     def test_RSA_MD_Zlib(self):        
         assert osadl_matrix.get_compatibility("RSA-MD", "Zlib") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_RSA_MD_blessing(self):        
+        assert osadl_matrix.get_compatibility("RSA-MD", "blessing") == osadl_matrix.OSADLCompatibility.YES
     
 
     def test_RSA_MD_bzip2_1_0_5(self):        
@@ -23998,6 +24270,10 @@ class TestSnapshot():
         assert osadl_matrix.get_compatibility("Sleepycat", "Zlib") == osadl_matrix.OSADLCompatibility.YES
     
 
+    def test_Sleepycat_blessing(self):        
+        assert osadl_matrix.get_compatibility("Sleepycat", "blessing") == osadl_matrix.OSADLCompatibility.YES
+    
+
     def test_Sleepycat_bzip2_1_0_5(self):        
         assert osadl_matrix.get_compatibility("Sleepycat", "bzip2-1.0.5") == osadl_matrix.OSADLCompatibility.YES
     
@@ -24344,6 +24620,10 @@ class TestSnapshot():
 
     def test_SunPro_Zlib(self):        
         assert osadl_matrix.get_compatibility("SunPro", "Zlib") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_SunPro_blessing(self):        
+        assert osadl_matrix.get_compatibility("SunPro", "blessing") == osadl_matrix.OSADLCompatibility.YES
     
 
     def test_SunPro_bzip2_1_0_5(self):        
@@ -24694,6 +24974,10 @@ class TestSnapshot():
         assert osadl_matrix.get_compatibility("UPL-1.0", "Zlib") == osadl_matrix.OSADLCompatibility.YES
     
 
+    def test_UPL_1_0_blessing(self):        
+        assert osadl_matrix.get_compatibility("UPL-1.0", "blessing") == osadl_matrix.OSADLCompatibility.YES
+    
+
     def test_UPL_1_0_bzip2_1_0_5(self):        
         assert osadl_matrix.get_compatibility("UPL-1.0", "bzip2-1.0.5") == osadl_matrix.OSADLCompatibility.YES
     
@@ -25040,6 +25324,10 @@ class TestSnapshot():
 
     def test_Unicode_DFS_2015_Zlib(self):        
         assert osadl_matrix.get_compatibility("Unicode-DFS-2015", "Zlib") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_Unicode_DFS_2015_blessing(self):        
+        assert osadl_matrix.get_compatibility("Unicode-DFS-2015", "blessing") == osadl_matrix.OSADLCompatibility.YES
     
 
     def test_Unicode_DFS_2015_bzip2_1_0_5(self):        
@@ -25390,6 +25678,10 @@ class TestSnapshot():
         assert osadl_matrix.get_compatibility("Unicode-DFS-2016", "Zlib") == osadl_matrix.OSADLCompatibility.YES
     
 
+    def test_Unicode_DFS_2016_blessing(self):        
+        assert osadl_matrix.get_compatibility("Unicode-DFS-2016", "blessing") == osadl_matrix.OSADLCompatibility.YES
+    
+
     def test_Unicode_DFS_2016_bzip2_1_0_5(self):        
         assert osadl_matrix.get_compatibility("Unicode-DFS-2016", "bzip2-1.0.5") == osadl_matrix.OSADLCompatibility.YES
     
@@ -25736,6 +26028,10 @@ class TestSnapshot():
 
     def test_Unlicense_Zlib(self):        
         assert osadl_matrix.get_compatibility("Unlicense", "Zlib") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_Unlicense_blessing(self):        
+        assert osadl_matrix.get_compatibility("Unlicense", "blessing") == osadl_matrix.OSADLCompatibility.YES
     
 
     def test_Unlicense_bzip2_1_0_5(self):        
@@ -26086,6 +26382,10 @@ class TestSnapshot():
         assert osadl_matrix.get_compatibility("W3C", "Zlib") == osadl_matrix.OSADLCompatibility.YES
     
 
+    def test_W3C_blessing(self):        
+        assert osadl_matrix.get_compatibility("W3C", "blessing") == osadl_matrix.OSADLCompatibility.YES
+    
+
     def test_W3C_bzip2_1_0_5(self):        
         assert osadl_matrix.get_compatibility("W3C", "bzip2-1.0.5") == osadl_matrix.OSADLCompatibility.YES
     
@@ -26432,6 +26732,10 @@ class TestSnapshot():
 
     def test_W3C_19980720_Zlib(self):        
         assert osadl_matrix.get_compatibility("W3C-19980720", "Zlib") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_W3C_19980720_blessing(self):        
+        assert osadl_matrix.get_compatibility("W3C-19980720", "blessing") == osadl_matrix.OSADLCompatibility.YES
     
 
     def test_W3C_19980720_bzip2_1_0_5(self):        
@@ -26782,6 +27086,10 @@ class TestSnapshot():
         assert osadl_matrix.get_compatibility("W3C-20150513", "Zlib") == osadl_matrix.OSADLCompatibility.YES
     
 
+    def test_W3C_20150513_blessing(self):        
+        assert osadl_matrix.get_compatibility("W3C-20150513", "blessing") == osadl_matrix.OSADLCompatibility.YES
+    
+
     def test_W3C_20150513_bzip2_1_0_5(self):        
         assert osadl_matrix.get_compatibility("W3C-20150513", "bzip2-1.0.5") == osadl_matrix.OSADLCompatibility.YES
     
@@ -27128,6 +27436,10 @@ class TestSnapshot():
 
     def test_WTFPL_Zlib(self):        
         assert osadl_matrix.get_compatibility("WTFPL", "Zlib") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_WTFPL_blessing(self):        
+        assert osadl_matrix.get_compatibility("WTFPL", "blessing") == osadl_matrix.OSADLCompatibility.YES
     
 
     def test_WTFPL_bzip2_1_0_5(self):        
@@ -27478,6 +27790,10 @@ class TestSnapshot():
         assert osadl_matrix.get_compatibility("X11", "Zlib") == osadl_matrix.OSADLCompatibility.YES
     
 
+    def test_X11_blessing(self):        
+        assert osadl_matrix.get_compatibility("X11", "blessing") == osadl_matrix.OSADLCompatibility.YES
+    
+
     def test_X11_bzip2_1_0_5(self):        
         assert osadl_matrix.get_compatibility("X11", "bzip2-1.0.5") == osadl_matrix.OSADLCompatibility.YES
     
@@ -27824,6 +28140,10 @@ class TestSnapshot():
 
     def test_XFree86_1_1_Zlib(self):        
         assert osadl_matrix.get_compatibility("XFree86-1.1", "Zlib") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_XFree86_1_1_blessing(self):        
+        assert osadl_matrix.get_compatibility("XFree86-1.1", "blessing") == osadl_matrix.OSADLCompatibility.YES
     
 
     def test_XFree86_1_1_bzip2_1_0_5(self):        
@@ -28174,6 +28494,10 @@ class TestSnapshot():
         assert osadl_matrix.get_compatibility("ZPL-2.0", "Zlib") == osadl_matrix.OSADLCompatibility.YES
     
 
+    def test_ZPL_2_0_blessing(self):        
+        assert osadl_matrix.get_compatibility("ZPL-2.0", "blessing") == osadl_matrix.OSADLCompatibility.YES
+    
+
     def test_ZPL_2_0_bzip2_1_0_5(self):        
         assert osadl_matrix.get_compatibility("ZPL-2.0", "bzip2-1.0.5") == osadl_matrix.OSADLCompatibility.YES
     
@@ -28522,6 +28846,10 @@ class TestSnapshot():
         assert osadl_matrix.get_compatibility("Zlib", "Zlib") == osadl_matrix.OSADLCompatibility.YES
     
 
+    def test_Zlib_blessing(self):        
+        assert osadl_matrix.get_compatibility("Zlib", "blessing") == osadl_matrix.OSADLCompatibility.YES
+    
+
     def test_Zlib_bzip2_1_0_5(self):        
         assert osadl_matrix.get_compatibility("Zlib", "bzip2-1.0.5") == osadl_matrix.OSADLCompatibility.YES
     
@@ -28540,6 +28868,358 @@ class TestSnapshot():
 
     def test_Zlib_zlib_acknowledgement(self):        
         assert osadl_matrix.get_compatibility("Zlib", "zlib-acknowledgement") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_blessing_0BSD(self):        
+        assert osadl_matrix.get_compatibility("blessing", "0BSD") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_blessing_AFL_2_0(self):        
+        assert osadl_matrix.get_compatibility("blessing", "AFL-2.0") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_blessing_AFL_2_1(self):        
+        assert osadl_matrix.get_compatibility("blessing", "AFL-2.1") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_blessing_AFL_3_0(self):        
+        assert osadl_matrix.get_compatibility("blessing", "AFL-3.0") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_blessing_AGPL_3_0_only(self):        
+        assert osadl_matrix.get_compatibility("blessing", "AGPL-3.0-only") == osadl_matrix.OSADLCompatibility.NO
+    
+
+    def test_blessing_AGPL_3_0_or_later(self):        
+        assert osadl_matrix.get_compatibility("blessing", "AGPL-3.0-or-later") == osadl_matrix.OSADLCompatibility.NO
+    
+
+    def test_blessing_Apache_1_0(self):        
+        assert osadl_matrix.get_compatibility("blessing", "Apache-1.0") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_blessing_Apache_1_1(self):        
+        assert osadl_matrix.get_compatibility("blessing", "Apache-1.1") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_blessing_Apache_2_0(self):        
+        assert osadl_matrix.get_compatibility("blessing", "Apache-2.0") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_blessing_Artistic_1_0(self):        
+        assert osadl_matrix.get_compatibility("blessing", "Artistic-1.0") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_blessing_Artistic_1_0_Perl(self):        
+        assert osadl_matrix.get_compatibility("blessing", "Artistic-1.0-Perl") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_blessing_Artistic_2_0(self):        
+        assert osadl_matrix.get_compatibility("blessing", "Artistic-2.0") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_blessing_BSD_1_Clause(self):        
+        assert osadl_matrix.get_compatibility("blessing", "BSD-1-Clause") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_blessing_BSD_2_Clause(self):        
+        assert osadl_matrix.get_compatibility("blessing", "BSD-2-Clause") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_blessing_BSD_2_Clause_Patent(self):        
+        assert osadl_matrix.get_compatibility("blessing", "BSD-2-Clause-Patent") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_blessing_BSD_3_Clause(self):        
+        assert osadl_matrix.get_compatibility("blessing", "BSD-3-Clause") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_blessing_BSD_4_Clause(self):        
+        assert osadl_matrix.get_compatibility("blessing", "BSD-4-Clause") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_blessing_BSD_4_Clause_UC(self):        
+        assert osadl_matrix.get_compatibility("blessing", "BSD-4-Clause-UC") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_blessing_BSD_Source_Code(self):        
+        assert osadl_matrix.get_compatibility("blessing", "BSD-Source-Code") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_blessing_BSL_1_0(self):        
+        assert osadl_matrix.get_compatibility("blessing", "BSL-1.0") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_blessing_CC0_1_0(self):        
+        assert osadl_matrix.get_compatibility("blessing", "CC0-1.0") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_blessing_CDDL_1_0(self):        
+        assert osadl_matrix.get_compatibility("blessing", "CDDL-1.0") == osadl_matrix.OSADLCompatibility.NO
+    
+
+    def test_blessing_CDDL_1_1(self):        
+        assert osadl_matrix.get_compatibility("blessing", "CDDL-1.1") == osadl_matrix.OSADLCompatibility.NO
+    
+
+    def test_blessing_CPL_1_0(self):        
+        assert osadl_matrix.get_compatibility("blessing", "CPL-1.0") == osadl_matrix.OSADLCompatibility.NO
+    
+
+    def test_blessing_EFL_2_0(self):        
+        assert osadl_matrix.get_compatibility("blessing", "EFL-2.0") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_blessing_EPL_1_0(self):        
+        assert osadl_matrix.get_compatibility("blessing", "EPL-1.0") == osadl_matrix.OSADLCompatibility.NO
+    
+
+    def test_blessing_EPL_2_0(self):        
+        assert osadl_matrix.get_compatibility("blessing", "EPL-2.0") == osadl_matrix.OSADLCompatibility.NO
+    
+
+    def test_blessing_EUPL_1_1(self):        
+        assert osadl_matrix.get_compatibility("blessing", "EUPL-1.1") == osadl_matrix.OSADLCompatibility.NO
+    
+
+    def test_blessing_EUPL_1_2(self):        
+        assert osadl_matrix.get_compatibility("blessing", "EUPL-1.2") == osadl_matrix.OSADLCompatibility.NO
+    
+
+    def test_blessing_FSFAP(self):        
+        assert osadl_matrix.get_compatibility("blessing", "FSFAP") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_blessing_FSFULLR(self):        
+        assert osadl_matrix.get_compatibility("blessing", "FSFULLR") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_blessing_FTL(self):        
+        assert osadl_matrix.get_compatibility("blessing", "FTL") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_blessing_GPL_1_0_only(self):        
+        assert osadl_matrix.get_compatibility("blessing", "GPL-1.0-only") == osadl_matrix.OSADLCompatibility.NO
+    
+
+    def test_blessing_GPL_1_0_or_later(self):        
+        assert osadl_matrix.get_compatibility("blessing", "GPL-1.0-or-later") == osadl_matrix.OSADLCompatibility.NO
+    
+
+    def test_blessing_GPL_2_0_only(self):        
+        assert osadl_matrix.get_compatibility("blessing", "GPL-2.0-only") == osadl_matrix.OSADLCompatibility.NO
+    
+
+    def test_blessing_GPL_2_0_only_WITH_Classpath_exception_2_0(self):        
+        assert osadl_matrix.get_compatibility("blessing", "GPL-2.0-only WITH Classpath-exception-2.0") == osadl_matrix.OSADLCompatibility.NO
+    
+
+    def test_blessing_GPL_2_0_or_later(self):        
+        assert osadl_matrix.get_compatibility("blessing", "GPL-2.0-or-later") == osadl_matrix.OSADLCompatibility.NO
+    
+
+    def test_blessing_GPL_3_0_only(self):        
+        assert osadl_matrix.get_compatibility("blessing", "GPL-3.0-only") == osadl_matrix.OSADLCompatibility.NO
+    
+
+    def test_blessing_GPL_3_0_or_later(self):        
+        assert osadl_matrix.get_compatibility("blessing", "GPL-3.0-or-later") == osadl_matrix.OSADLCompatibility.NO
+    
+
+    def test_blessing_HPND(self):        
+        assert osadl_matrix.get_compatibility("blessing", "HPND") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_blessing_IBM_pibs(self):        
+        assert osadl_matrix.get_compatibility("blessing", "IBM-pibs") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_blessing_ICU(self):        
+        assert osadl_matrix.get_compatibility("blessing", "ICU") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_blessing_IJG(self):        
+        assert osadl_matrix.get_compatibility("blessing", "IJG") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_blessing_IPL_1_0(self):        
+        assert osadl_matrix.get_compatibility("blessing", "IPL-1.0") == osadl_matrix.OSADLCompatibility.NO
+    
+
+    def test_blessing_ISC(self):        
+        assert osadl_matrix.get_compatibility("blessing", "ISC") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_blessing_Info_ZIP(self):        
+        assert osadl_matrix.get_compatibility("blessing", "Info-ZIP") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_blessing_LGPL_2_1_only(self):        
+        assert osadl_matrix.get_compatibility("blessing", "LGPL-2.1-only") == osadl_matrix.OSADLCompatibility.NO
+    
+
+    def test_blessing_LGPL_2_1_or_later(self):        
+        assert osadl_matrix.get_compatibility("blessing", "LGPL-2.1-or-later") == osadl_matrix.OSADLCompatibility.NO
+    
+
+    def test_blessing_LGPL_3_0_only(self):        
+        assert osadl_matrix.get_compatibility("blessing", "LGPL-3.0-only") == osadl_matrix.OSADLCompatibility.NO
+    
+
+    def test_blessing_LGPL_3_0_or_later(self):        
+        assert osadl_matrix.get_compatibility("blessing", "LGPL-3.0-or-later") == osadl_matrix.OSADLCompatibility.NO
+    
+
+    def test_blessing_Libpng(self):        
+        assert osadl_matrix.get_compatibility("blessing", "Libpng") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_blessing_MIT(self):        
+        assert osadl_matrix.get_compatibility("blessing", "MIT") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_blessing_MIT_CMU(self):        
+        assert osadl_matrix.get_compatibility("blessing", "MIT-CMU") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_blessing_MPL_1_1(self):        
+        assert osadl_matrix.get_compatibility("blessing", "MPL-1.1") == osadl_matrix.OSADLCompatibility.NO
+    
+
+    def test_blessing_MPL_2_0(self):        
+        assert osadl_matrix.get_compatibility("blessing", "MPL-2.0") == osadl_matrix.OSADLCompatibility.NO
+    
+
+    def test_blessing_MPL_2_0_no_copyleft_exception(self):        
+        assert osadl_matrix.get_compatibility("blessing", "MPL-2.0-no-copyleft-exception") == osadl_matrix.OSADLCompatibility.NO
+    
+
+    def test_blessing_MS_PL(self):        
+        assert osadl_matrix.get_compatibility("blessing", "MS-PL") == osadl_matrix.OSADLCompatibility.UNKNOWN
+    
+
+    def test_blessing_MS_RL(self):        
+        assert osadl_matrix.get_compatibility("blessing", "MS-RL") == osadl_matrix.OSADLCompatibility.NO
+    
+
+    def test_blessing_MirOS(self):        
+        assert osadl_matrix.get_compatibility("blessing", "MirOS") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_blessing_NBPL_1_0(self):        
+        assert osadl_matrix.get_compatibility("blessing", "NBPL-1.0") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_blessing_NTP(self):        
+        assert osadl_matrix.get_compatibility("blessing", "NTP") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_blessing_OSL_3_0(self):        
+        assert osadl_matrix.get_compatibility("blessing", "OSL-3.0") == osadl_matrix.OSADLCompatibility.NO
+    
+
+    def test_blessing_OpenSSL(self):        
+        assert osadl_matrix.get_compatibility("blessing", "OpenSSL") == osadl_matrix.OSADLCompatibility.UNKNOWN
+    
+
+    def test_blessing_PHP_3_01(self):        
+        assert osadl_matrix.get_compatibility("blessing", "PHP-3.01") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_blessing_PostgreSQL(self):        
+        assert osadl_matrix.get_compatibility("blessing", "PostgreSQL") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_blessing_Python_2_0(self):        
+        assert osadl_matrix.get_compatibility("blessing", "Python-2.0") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_blessing_Qhull(self):        
+        assert osadl_matrix.get_compatibility("blessing", "Qhull") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_blessing_RSA_MD(self):        
+        assert osadl_matrix.get_compatibility("blessing", "RSA-MD") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_blessing_Sleepycat(self):        
+        assert osadl_matrix.get_compatibility("blessing", "Sleepycat") == osadl_matrix.OSADLCompatibility.NO
+    
+
+    def test_blessing_SunPro(self):        
+        assert osadl_matrix.get_compatibility("blessing", "SunPro") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_blessing_UPL_1_0(self):        
+        assert osadl_matrix.get_compatibility("blessing", "UPL-1.0") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_blessing_Unicode_DFS_2015(self):        
+        assert osadl_matrix.get_compatibility("blessing", "Unicode-DFS-2015") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_blessing_Unicode_DFS_2016(self):        
+        assert osadl_matrix.get_compatibility("blessing", "Unicode-DFS-2016") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_blessing_Unlicense(self):        
+        assert osadl_matrix.get_compatibility("blessing", "Unlicense") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_blessing_W3C(self):        
+        assert osadl_matrix.get_compatibility("blessing", "W3C") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_blessing_W3C_19980720(self):        
+        assert osadl_matrix.get_compatibility("blessing", "W3C-19980720") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_blessing_W3C_20150513(self):        
+        assert osadl_matrix.get_compatibility("blessing", "W3C-20150513") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_blessing_WTFPL(self):        
+        assert osadl_matrix.get_compatibility("blessing", "WTFPL") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_blessing_X11(self):        
+        assert osadl_matrix.get_compatibility("blessing", "X11") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_blessing_XFree86_1_1(self):        
+        assert osadl_matrix.get_compatibility("blessing", "XFree86-1.1") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_blessing_ZPL_2_0(self):        
+        assert osadl_matrix.get_compatibility("blessing", "ZPL-2.0") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_blessing_Zlib(self):        
+        assert osadl_matrix.get_compatibility("blessing", "Zlib") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_blessing_blessing(self):        
+        assert osadl_matrix.get_compatibility("blessing", "blessing") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_blessing_bzip2_1_0_5(self):        
+        assert osadl_matrix.get_compatibility("blessing", "bzip2-1.0.5") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_blessing_bzip2_1_0_6(self):        
+        assert osadl_matrix.get_compatibility("blessing", "bzip2-1.0.6") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_blessing_curl(self):        
+        assert osadl_matrix.get_compatibility("blessing", "curl") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_blessing_libtiff(self):        
+        assert osadl_matrix.get_compatibility("blessing", "libtiff") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_blessing_zlib_acknowledgement(self):        
+        assert osadl_matrix.get_compatibility("blessing", "zlib-acknowledgement") == osadl_matrix.OSADLCompatibility.YES
     
 
     def test_bzip2_1_0_5_0BSD(self):        
@@ -28868,6 +29548,10 @@ class TestSnapshot():
 
     def test_bzip2_1_0_5_Zlib(self):        
         assert osadl_matrix.get_compatibility("bzip2-1.0.5", "Zlib") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_bzip2_1_0_5_blessing(self):        
+        assert osadl_matrix.get_compatibility("bzip2-1.0.5", "blessing") == osadl_matrix.OSADLCompatibility.YES
     
 
     def test_bzip2_1_0_5_bzip2_1_0_5(self):        
@@ -29218,6 +29902,10 @@ class TestSnapshot():
         assert osadl_matrix.get_compatibility("bzip2-1.0.6", "Zlib") == osadl_matrix.OSADLCompatibility.YES
     
 
+    def test_bzip2_1_0_6_blessing(self):        
+        assert osadl_matrix.get_compatibility("bzip2-1.0.6", "blessing") == osadl_matrix.OSADLCompatibility.YES
+    
+
     def test_bzip2_1_0_6_bzip2_1_0_5(self):        
         assert osadl_matrix.get_compatibility("bzip2-1.0.6", "bzip2-1.0.5") == osadl_matrix.OSADLCompatibility.YES
     
@@ -29564,6 +30252,10 @@ class TestSnapshot():
 
     def test_curl_Zlib(self):        
         assert osadl_matrix.get_compatibility("curl", "Zlib") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_curl_blessing(self):        
+        assert osadl_matrix.get_compatibility("curl", "blessing") == osadl_matrix.OSADLCompatibility.YES
     
 
     def test_curl_bzip2_1_0_5(self):        
@@ -29914,6 +30606,10 @@ class TestSnapshot():
         assert osadl_matrix.get_compatibility("libtiff", "Zlib") == osadl_matrix.OSADLCompatibility.YES
     
 
+    def test_libtiff_blessing(self):        
+        assert osadl_matrix.get_compatibility("libtiff", "blessing") == osadl_matrix.OSADLCompatibility.YES
+    
+
     def test_libtiff_bzip2_1_0_5(self):        
         assert osadl_matrix.get_compatibility("libtiff", "bzip2-1.0.5") == osadl_matrix.OSADLCompatibility.YES
     
@@ -30260,6 +30956,10 @@ class TestSnapshot():
 
     def test_zlib_acknowledgement_Zlib(self):        
         assert osadl_matrix.get_compatibility("zlib-acknowledgement", "Zlib") == osadl_matrix.OSADLCompatibility.YES
+    
+
+    def test_zlib_acknowledgement_blessing(self):        
+        assert osadl_matrix.get_compatibility("zlib-acknowledgement", "blessing") == osadl_matrix.OSADLCompatibility.YES
     
 
     def test_zlib_acknowledgement_bzip2_1_0_5(self):        
