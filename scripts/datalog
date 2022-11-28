@@ -1,0 +1,76 @@
+#!/usr/bin/env python3
+# SPDX-FileCopyrightText: 2022 Konrad Weihmann
+# SPDX-License-Identifier: Unlicensed
+
+import argparse
+import json
+import re
+
+from deepdiff import DeepDiff
+
+
+def create_argparser():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('old', help='Previous file')
+    parser.add_argument('new', help='New file')
+    parser.add_argument('version', help='New version')
+    parser.add_argument('output', help='Path to datalog')
+
+    return parser.parse_args()
+
+
+def main():
+    args = create_argparser()
+    with open(args.old) as i:
+        j1 = json.load(i)
+
+    with open(args.new) as i:
+        j2 = json.load(i)
+
+    with open(args.output) as i:
+        datalog = i.read()
+
+    ddiff = DeepDiff(j1, j2, view='tree')
+
+    changed_values = set()
+    new_items = set()
+    removed_items = set()
+
+    pattern = re.compile(r'\[|\]|\'')
+
+    for value in ddiff.get('values_changed', []):
+        path = [x for x in re.sub(pattern, ' ', value._path['NoneFalseFalsestr']).split(' ') if x]
+        if len(path) < 2:
+            continue
+        changed_values.add(f'{path[0]} -> {path[1]}: changed from "{value.t1}" to "{value.t2}"')
+
+    for value in ddiff.get('dictionary_item_added', []):
+        path = [x for x in re.sub(pattern, ' ', value._path['NoneFalseFalsestr']).split(' ') if x]
+        if len(path) < 2:
+            continue
+        new_items.add(f'{path[0]} -> {path[1]}: newly added with "{value.t2}"')
+
+    for value in ddiff.get('dictionary_item_removed', []):
+        path = [x for x in re.sub(pattern, ' ', value._path['NoneFalseFalsestr']).split(' ') if x]
+        if len(path) < 2:
+            continue
+        removed_items.add(f'{path[0]} -> {path[1]}: got removed')
+
+    new_entry = f'# Version {args.version}\n\n'
+
+    if new_items:
+        new_entry += '\n'.join([f'- {x}' for x in new_items]) + '\n'
+    if removed_items:
+        new_entry += '\n'.join([f'- {x}' for x in removed_items]) + '\n'
+    if changed_values:
+        new_entry += '\n'.join([f'- {x}' for x in changed_values]) + '\n'
+
+    new_entry += '\n'
+
+    with open(args.output, 'w') as o:
+        o.write(new_entry)
+        o.write(datalog)
+
+
+if __name__ == '__main__':
+    main()
