@@ -2,6 +2,10 @@
 
 This is a machine readable version of the [OSADL license compatibility matrix](https://www.osadl.org/Access-to-raw-data.oss-compliance-raw-data-access.0.html) as a python library.
 
+## Changelog of the provided data
+
+A detailed changelog of the provided data can be found [here](https://github.com/priv-kweihmann/osadl-matrix/blob/master/DATALOG.md)
+
 ## License
 
 This module is licensed under [Unlicensed](LICENSE.Unlicensed) license. Feel free to do whatever you want with it.

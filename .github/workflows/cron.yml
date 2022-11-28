@@ -20,6 +20,7 @@ jobs:
     - name: scrap
       run: |
         pip3 install -r requirements-dev.txt
+        cp osadl_matrix/osadl-matrix.json osadl-matrix.json.bak
         python3 scripts/scrapper.py
       shell: bash
     - name: check for changes
@@ -50,6 +51,11 @@ jobs:
       run: |
         pytest
       shell: bash
+    - name: generate datalog
+      if: steps.new-commits.outputs.NEW_COMMITS == '1'
+      run: |
+        python3 scripts/datalog osadl-matrix.json.bak osadl_matrix/osadl-matrix.json DATALOG.md
+      shell: bash
     - name: push
       if: steps.new-commits.outputs.NEW_COMMITS == '1'
       uses: github-actions-x/commit@v2.9
@@ -57,7 +63,7 @@ jobs:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         push-branch: 'master'
         commit-message: 'Bump matrix'
-        files: osadl_matrix/osadl-matrix.csv osadl_matrix/osadl-matrix.json
+        files: osadl_matrix/osadl-matrix.csv osadl_matrix/osadl-matrix.json DATALOG.md
         name: ${{ secrets.COMMITER_NAME }}
         email: ${{ secrets.COMMITER_MAIL }}
         rebase: 'true'

@@ -18,3 +18,5 @@ tests/all.log
 .coverage
 
 tmp/*
+
+osadl-matrix.json.bak
