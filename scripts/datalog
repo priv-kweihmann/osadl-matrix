@@ -13,7 +13,6 @@ def create_argparser():
     parser = argparse.ArgumentParser()
     parser.add_argument('old', help='Previous file')
     parser.add_argument('new', help='New file')
-    parser.add_argument('version', help='New version')
     parser.add_argument('output', help='Path to datalog')
 
     return parser.parse_args()
@@ -56,7 +55,7 @@ def main():
             continue
         removed_items.add(f'{path[0]} -> {path[1]}: got removed')
 
-    new_entry = f'# Version {args.version}\n\n'
+    new_entry = f'# Changes in {j2.get("timestamp", "latest release")}\n\n'
 
     if new_items:
         new_entry += '\n'.join([f'- {x}' for x in new_items]) + '\n'
