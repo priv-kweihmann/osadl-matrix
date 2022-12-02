@@ -3384,7 +3384,7 @@
     "MIT": "Yes",
     "MIT-CMU": "Unknown",
     "MPL-1.1": "No",
-    "MPL-2.0": "No",
+    "MPL-2.0": "Yes",
     "MPL-2.0-no-copyleft-exception": "No",
     "MS-PL": "Unknown",
     "MS-RL": "No",
@@ -7830,7 +7830,7 @@
     "zlib-acknowledgement": "Yes"
   },
   "timeformat": "%Y-%m-%dT%H:%M:%S%z",
-  "timestamp": "2022-11-25T18:57:00+00:00",
+  "timestamp": "2022-11-29T09:22:00+00:00",
   "zlib-acknowledgement": {
     "0BSD": "Yes",
     "AFL-2.0": "Yes",
