@@ -1,5 +1,10 @@
 # Changes in 2023-01-09T15:58:00+00:00
 
+- CPL-1.0 -> EPL-1.0: changed from "Yes" to "No"
+- EPL-2.0 -> CPL-1.0: changed from "No" to "Yes"
+
+# Changes in 2023-01-09T15:58:00+00:00
+
 
 # Changes in 2023-01-08T22:41:00+00:00
 
