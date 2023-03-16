@@ -45,30 +45,28 @@ def main():
 
     for value in ddiff.get('dictionary_item_added', []):
         path = [x for x in re.sub(pattern, ' ', value._path['NoneFalseFalsestr']).split(' ') if x]
-        if len(path) < 2:
-            continue
-        new_items.add(f'{path[0]} -> {path[1]}: newly added with "{value.t2}"')
+        new_items.add(f'{path[0]}: newly added')
 
     for value in ddiff.get('dictionary_item_removed', []):
         path = [x for x in re.sub(pattern, ' ', value._path['NoneFalseFalsestr']).split(' ') if x]
-        if len(path) < 2:
-            continue
-        removed_items.add(f'{path[0]} -> {path[1]}: got removed')
+        removed_items.add(f'{path[0]}: got removed')
 
-    new_entry = f'# Changes in {j2.get("timestamp", "latest release")}\n\n'
+    if any(new_items) or any(removed_items) or any(changed_values):
 
-    if new_items:
-        new_entry += '\n'.join([f'- {x}' for x in new_items]) + '\n'
-    if removed_items:
-        new_entry += '\n'.join([f'- {x}' for x in removed_items]) + '\n'
-    if changed_values:
-        new_entry += '\n'.join([f'- {x}' for x in changed_values]) + '\n'
+        new_entry = f'# Changes in {j2.get("timestamp", "latest release")}\n\n'
 
-    new_entry += '\n'
+        if new_items:
+            new_entry += '\n'.join([f'- {x}' for x in new_items]) + '\n'
+        if removed_items:
+            new_entry += '\n'.join([f'- {x}' for x in removed_items]) + '\n'
+        if changed_values:
+            new_entry += '\n'.join([f'- {x}' for x in changed_values]) + '\n'
 
-    with open(args.output, 'w') as o:
-        o.write(new_entry)
-        o.write(datalog)
+        new_entry += '\n'
+
+        with open(args.output, 'w') as o:
+            o.write(new_entry)
+            o.write(datalog)
 
 
 if __name__ == '__main__':
