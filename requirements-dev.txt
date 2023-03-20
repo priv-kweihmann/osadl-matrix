@@ -1,4 +1,4 @@
-deepdiff ~= 6.2
+deepdiff ~= 6.3
 dlint == 0.14.0
 flake8 == 5.0.4
 flake8-2020 == 1.7.0
