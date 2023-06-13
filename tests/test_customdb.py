@@ -1,18 +1,41 @@
-# SPDX-FileCopyrightText: 2022 Henrik Sandklef
+# SPDX-FileCopyrightText: 2023 Henrik Sandklef
 # SPDX-License-Identifier: Unlicensed
 
 import pytest
 import osadl_matrix
 
+mini_matrix = "tests/mini-matrix.json"
+
 class TestCustomMatrix():
 
     def test_supported_licenes_size(self):
-        assert len(osadl_matrix.supported_licenses("tests/mini-matrix.csv")) == 2
+        assert len(osadl_matrix.supported_licenses(mini_matrix)) == 3
 
-    def test_supported_content(self):
-        supported = osadl_matrix.supported_licenses("tests/mini-matrix.csv")
-        assert "0BSD" in supported
-        assert "AFL-2.0" in supported
-        assert "MIT" not in supported
-        assert osadl_matrix.is_compatible("AFL-2.0", "0BSD")
-        assert not osadl_matrix.is_compatible("0BSD", "AFL-2.0")
+    def test_supported_licenses(self):
+        supported = osadl_matrix.supported_licenses(mini_matrix)
+        assert "BSD-3-Clause" in supported
+        assert "Dummy" in supported
+        assert "GPL-2.0-OR-LATER" not in supported
+        
+    def test_compats(self):
+        assert osadl_matrix.is_compatible("BSD-3-Clause", "BSD-3-Clause", mini_matrix)
+        assert osadl_matrix.is_compatible("BSD-3-Clause", "Dummy", mini_matrix)
+        assert osadl_matrix.is_compatible("GPL-2.0-or-later", "BSD-3-Clause", mini_matrix)
+        assert osadl_matrix.is_compatible("BSD-3-Clause", "BSD-3-Clause", mini_matrix)
+        assert osadl_matrix.is_compatible("BSD-3-Clause", "Dummy", mini_matrix)
+        assert osadl_matrix.is_compatible("GPL-2.0-or-later", "BSD-3-Clause", mini_matrix)
+        
+    def test_not_compats(self):
+        assert not osadl_matrix.is_compatible("BSD-3-Clause", "GPL-2.0-or-later", mini_matrix)
+        assert not osadl_matrix.is_compatible("Dummy", "BSD-3-Clause", mini_matrix)
+        
+    def test_not_supported(self):
+        assert not osadl_matrix.is_compatible("Dummy", "Donkey", mini_matrix)
+        assert not osadl_matrix.is_compatible("Donkey", "Dummy", mini_matrix)
+        assert not osadl_matrix.is_compatible("Monkey", "Donkey", mini_matrix)
+
+    def test_get_compat(self):
+        assert osadl_matrix.get_compatibility("GPL-2.0-or-later", "BSD-3-Clause", mini_matrix) == osadl_matrix.OSADLCompatibility.YES
+        assert osadl_matrix.get_compatibility("BSD-3-Clause", "GPL-2.0-or-later", mini_matrix) == osadl_matrix.OSADLCompatibility.NO
+        assert osadl_matrix.get_compatibility("GPL-2.0-or-later", "Not-existing-license", mini_matrix) == osadl_matrix.OSADLCompatibility.UNDEF
+        
