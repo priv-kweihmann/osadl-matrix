@@ -79,7 +79,7 @@ def get_compatibility(outbound, inbound, customdb=None):
     __read_db(customdb=customdb)
     try:
         return OSADLCompatibility.from_text(__osadl_db.get(outbound).get(inbound))
-    except:
+    except AttributeError:
         return OSADLCompatibility.UNDEF
 
 
