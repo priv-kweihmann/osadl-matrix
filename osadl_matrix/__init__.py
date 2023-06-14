@@ -60,7 +60,7 @@ def __read_db(customdb=None):
                                 continue
                             if key not in __osadl_db:
                                 __osadl_db[key] = {}
-                            __osadl_db[key][k] = OSADLCompatibility.from_text(v)
+                            __osadl_db[key][k] = v
 
 
 def is_compatible(outbound, inbound, customdb=None):
