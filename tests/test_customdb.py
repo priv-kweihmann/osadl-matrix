@@ -4,25 +4,18 @@
 import pytest
 import osadl_matrix
 
-mini_matrix = "tests/mini-matrix.json"
+mini_matrix_json = "tests/mini-matrix.json"
 mini_matrix_csv = "tests/mini-matrix.csv"
 
-class TestCustomMatrix():
+mini_matrix = None
+
+class BaseCustomMatrix():
 
     def test_supported_licenes_size(self):
         assert len(osadl_matrix.supported_licenses(mini_matrix)) == 3
 
-    def test_supported_licenes_size_csv(self):
-        assert len(osadl_matrix.supported_licenses(mini_matrix_csv)) == 3
-
     def test_supported_licenses(self):
         supported = osadl_matrix.supported_licenses(mini_matrix)
-        assert "BSD-3-Clause" in supported
-        assert "Dummy" in supported
-        assert "GPL-2.0-OR-LATER" not in supported
-    
-    def test_supported_licenses_csv(self):
-        supported = osadl_matrix.supported_licenses(mini_matrix_csv)
         assert "BSD-3-Clause" in supported
         assert "Dummy" in supported
         assert "GPL-2.0-OR-LATER" not in supported
@@ -49,3 +42,17 @@ class TestCustomMatrix():
         assert osadl_matrix.get_compatibility("BSD-3-Clause", "GPL-2.0-or-later", mini_matrix) == osadl_matrix.OSADLCompatibility.NO
         assert osadl_matrix.get_compatibility("GPL-2.0-or-later", "Not-existing-license", mini_matrix) == osadl_matrix.OSADLCompatibility.UNDEF
         
+class TestCustomMatrixJson(BaseCustomMatrix):
+
+    @classmethod
+    def setup_class(cls):
+        global mini_matrix
+        mini_matrix = mini_matrix_json
+
+
+class TestCustomMatrixCsv(BaseCustomMatrix):
+
+    @classmethod
+    def setup_class(cls):
+        global mini_matrix
+        mini_matrix = mini_matrix_csv
