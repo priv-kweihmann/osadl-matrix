@@ -5,14 +5,24 @@ import pytest
 import osadl_matrix
 
 mini_matrix = "tests/mini-matrix.json"
+mini_matrix_csv = "tests/mini-matrix.csv"
 
 class TestCustomMatrix():
 
     def test_supported_licenes_size(self):
         assert len(osadl_matrix.supported_licenses(mini_matrix)) == 3
 
+    def test_supported_licenes_size_csv(self):
+        assert len(osadl_matrix.supported_licenses(mini_matrix_csv)) == 3
+
     def test_supported_licenses(self):
         supported = osadl_matrix.supported_licenses(mini_matrix)
+        assert "BSD-3-Clause" in supported
+        assert "Dummy" in supported
+        assert "GPL-2.0-OR-LATER" not in supported
+    
+    def test_supported_licenses_csv(self):
+        supported = osadl_matrix.supported_licenses(mini_matrix_csv)
         assert "BSD-3-Clause" in supported
         assert "Dummy" in supported
         assert "GPL-2.0-OR-LATER" not in supported

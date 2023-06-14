@@ -2,6 +2,7 @@
 # SPDX-FileCopyrightText: 2023 Henrik Sandklef
 # SPDX-License-Identifier: Unlicensed
 
+import csv
 import json
 import os
 from enum import Enum, unique
@@ -43,8 +44,24 @@ def __read_db(customdb=None):
     """
     global __osadl_db
     if not __osadl_db:
-        with open(customdb or OSADL_MATRIX_JSON) as i:
-            __osadl_db = json.load(i)
+        try:
+            with open(customdb or OSADL_MATRIX_JSON) as i:
+                __osadl_db = json.load(i)
+        except json.JSONDecodeError:
+            if customdb:  # pragma: no cover
+                with open(customdb) as i:
+                    _reader = csv.DictReader(i, delimiter=',', quotechar='"')
+                    for row in _reader:
+                        import logging
+                        logging.warning(row)
+                        key = row['Compatibility*']
+                        for k, v in row.items():
+                            if k == 'Compatibility*':
+                                continue
+                            if key not in __osadl_db:
+                                __osadl_db[key] = {}
+                            __osadl_db[key][k] = OSADLCompatibility.from_text(v)
+
 
 def is_compatible(outbound, inbound, customdb=None):
     """checks if the 'outbound' license is compatible with the 'inbound'

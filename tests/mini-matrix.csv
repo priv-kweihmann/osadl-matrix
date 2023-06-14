@@ -1,0 +1,4 @@
+Compatibility*,Dummy,BSD-3-Clause,GPL-2.0-or-later
+Dummy,Same,No,No
+BSD-3-Clause,Yes,Same,No
+GPL-2.0-or-later,Yes,Yes,Same
