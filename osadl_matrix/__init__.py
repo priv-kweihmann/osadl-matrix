@@ -52,8 +52,6 @@ def __read_db(customdb=None):
                 with open(customdb) as i:
                     _reader = csv.DictReader(i, delimiter=',', quotechar='"')
                     for row in _reader:
-                        import logging
-                        logging.warning(row)
                         key = row['Compatibility*']
                         for k, v in row.items():
                             if k == 'Compatibility*':
