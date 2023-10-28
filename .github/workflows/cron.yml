@@ -56,6 +56,14 @@ jobs:
       run: |
         python3 scripts/datalog osadl-matrix.json.bak osadl_matrix/osadl-matrix.json DATALOG.md
       shell: bash
+    - name: check for release relevant changes
+      id: new-release
+      run: |
+        if [ -n "$(git status --porcelain | grep DATALOG.md )" ]; then
+          echo "NEW_RELEASE=1" >> $GITHUB_OUTPUT
+        else
+          echo "NEW_RELEASE=0" >> $GITHUB_OUTPUT
+        fi
     - name: push
       if: steps.new-commits.outputs.NEW_COMMITS == '1'
       uses: github-actions-x/commit@v2.9
@@ -67,14 +75,6 @@ jobs:
         name: ${{ secrets.COMMITER_NAME }}
         email: ${{ secrets.COMMITER_MAIL }}
         rebase: 'true'
-    - name: check for release relevant changes
-      id: new-release
-      run: |
-        if [ -n "$(git status --porcelain | grep DATALOG.md )" ]; then
-          echo "NEW_RELEASE=1" >> $GITHUB_OUTPUT
-        else
-          echo "NEW_RELEASE=0" >> $GITHUB_OUTPUT
-        fi
     - name: Repository Dispatch
       if: steps.new-release.outputs.NEW_RELEASE == '1'
       uses: peter-evans/repository-dispatch@v2
