@@ -77,6 +77,6 @@ jobs:
         rebase: 'true'
     - name: Repository Dispatch
       if: steps.new-release.outputs.NEW_RELEASE == '1'
-      uses: peter-evans/repository-dispatch@v2
+      uses: peter-evans/repository-dispatch@v3
       with:
         event-type: cron_release
