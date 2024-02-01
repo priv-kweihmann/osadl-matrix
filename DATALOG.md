@@ -1,3 +1,9 @@
+# Changes in 2024-01-31T04:41:00+00:00
+
+- AGPL-3.0-only -> EUPL-1.2: changed from "No" to "Yes"
+- EUPL-1.2 -> MPL-2.0: changed from "No" to "Yes"
+- MPL-2.0 -> EUPL-1.2: changed from "No" to "Yes"
+
 # Changes in 2024-01-30T04:30:00+00:00
 
 - BSD-1-Clause: newly added
