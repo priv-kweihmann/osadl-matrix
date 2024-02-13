@@ -1,3 +1,19 @@
+# Changes in 2024-02-12T03:50:00+00:00
+
+- GPL-2.0-only -> LGPL-2.0-or-later: changed from "No" to "Yes"
+- GPL-3.0-or-later -> LGPL-2.0-only: changed from "No" to "Yes"
+- GPL-1.0-or-later -> LGPL-2.1-only: changed from "Check dependency" to "Yes"
+- GPL-3.0-or-later -> LGPL-2.0-or-later: changed from "No" to "Yes"
+- GPL-1.0-or-later -> LGPL-2.0-only: changed from "No" to "Yes"
+- GPL-2.0-or-later -> LGPL-2.0-only: changed from "No" to "Yes"
+- MPL-2.0 -> MPL-1.1: changed from "No" to "Yes"
+- GPL-1.0-or-later -> LGPL-2.0-or-later: changed from "No" to "Yes"
+- GPL-3.0-only -> LGPL-2.0-only: changed from "No" to "Yes"
+- GPL-3.0-only -> LGPL-2.0-or-later: changed from "No" to "Yes"
+- GPL-1.0-or-later -> LGPL-2.1-or-later: changed from "Check dependency" to "Yes"
+- GPL-2.0-or-later -> LGPL-2.0-or-later: changed from "No" to "Yes"
+- GPL-2.0-only -> LGPL-2.0-only: changed from "No" to "Yes"
+
 # Changes in 2024-02-02T05:39:00+00:00
 
 - LGPL-2.0-or-later -> SGI-B-2.0: changed from "Unknown" to "Yes"
