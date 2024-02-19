@@ -34,4 +34,4 @@ pytest-sugar == 1.0.0
 pytest-tldr == 0.2.5
 requests == 2.31.0
 twine == 5.0.0
-urllib3 == 2.2.0
+urllib3 == 2.2.1
