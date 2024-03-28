@@ -34,12 +34,12 @@ jobs:
     - name: install dependencies
       if: steps.new-commits.outputs.NEW_COMMITS == '1'
       run: |
-        python3 -m pip install --upgrade pip
+        python3 -m pip install --upgrade pip build
         pip3 install -r requirements.txt
       shell: bash
     - name: build
       if: steps.new-commits.outputs.NEW_COMMITS == '1'
-      run: python3 setup.py build
+      run: python3 -m build --sdist --wheel
       shell: bash
     - name: install more dependencies
       if: steps.new-commits.outputs.NEW_COMMITS == '1'

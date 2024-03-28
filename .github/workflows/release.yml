@@ -16,7 +16,7 @@ jobs:
         ref: master
     - name: install dependencies
       run: |
-        python3 -m pip install --upgrade pip
+        python3 -m pip install --upgrade pip build
         pip3 install -r requirements.txt
         pip3 install -r requirements-dev.txt
       shell: bash
@@ -24,7 +24,7 @@ jobs:
       run: |
         flake8
     - name: build
-      run: python3 setup.py build
+      run: python3 -m build --sdist --wheel
       shell: bash
     - name: test
       run: |
@@ -51,8 +51,8 @@ jobs:
         strategy: regex
         root: "VERSION"
         regex_pattern: '(.*)'
-    - name: create sdist release
-      run: python3 setup.py sdist
+    - name: create release
+      run: python3 -m build --sdist --wheel
       shell: bash        
     - name: publish package
       uses: pypa/gh-action-pypi-publish@release/v1
