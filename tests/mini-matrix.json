@@ -13,5 +13,7 @@
 	"BSD-3-Clause": "Yes",
 	"Dummy": "Yes",
 	"GPL-2.0-or-later": "Same"
-    }
+    },
+    "timeformat": {},
+    "timestamp": {}
 }
