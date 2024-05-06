@@ -47,6 +47,10 @@ def __read_db(customdb=None):
         try:
             with open(customdb or OSADL_MATRIX_JSON) as i:
                 __osadl_db = json.load(i)
+                # The below will raise KeyError if any of them are
+                # removed. Keep as is to make sure we detect when keys changes.
+                __osadl_db.pop('timestamp')
+                __osadl_db.pop('timeformat')
         except json.JSONDecodeError:
             if customdb:  # pragma: no cover
                 with open(customdb) as i:
