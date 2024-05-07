@@ -45,7 +45,7 @@ jobs:
         email: ${{ secrets.COMMITER_MAIL }}
         rebase: 'true'
     - name: tag version
-      uses: butlerlogic/action-autotag@1.1.4
+      uses: butlerlogic/action-autotag@1.1.2
       with:
         GITHUB_TOKEN: '${{ secrets.GITHUB_TOKEN }}'
         strategy: regex
