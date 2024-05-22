@@ -32,6 +32,6 @@ pytest-random-order == 1.1.1
 pytest-socket == 0.7.0
 pytest-sugar == 1.0.0
 pytest-tldr == 0.2.5
-requests == 2.32.1
+requests == 2.32.2
 twine == 5.1.0
 urllib3 == 2.2.1
