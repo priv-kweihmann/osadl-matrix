@@ -1,3 +1,10 @@
+# Changes in 2024-05-22T02:17:00+00:00
+
+- GPL-1.0-or-later -> LGPL-2.1-or-later: changed from "Yes" to "Check dependency"
+- GPL-1.0-or-later -> LGPL-2.0-only: changed from "Yes" to "Check dependency"
+- GPL-1.0-or-later -> LGPL-2.1-only: changed from "Yes" to "Check dependency"
+- GPL-1.0-or-later -> LGPL-2.0-or-later: changed from "Yes" to "Check dependency"
+
 # Changes in 2024-05-21T02:14:00+00:00
 
 - Unicode-DFS-2016: got removed
